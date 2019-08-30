@@ -1,6 +1,11 @@
 # NeoFPS_EmeraldAI
 NeoFPS and Emerald AI 2 integration assets
 
+## Requirements
+This repository was created using Unity 2018.1
+
+It requires the assets [NeoFPS](https://assetstore.unity.com/packages/templates/systems/neofps-150179?aid=1011l58Ft) and [Emerald AI](https://assetstore.unity.com/packages/tools/ai/emerald-ai-2-0-40199?aid=1011l58Ft).
+
 ## Installation
 This integration example is intended to be dropped in to a fresh project along with NeoFPS and Emerald AI.
 
