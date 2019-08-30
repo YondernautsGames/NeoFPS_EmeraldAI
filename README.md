@@ -12,7 +12,7 @@ This integration example is intended to be dropped in to a fresh project along w
 
 4. Remove the **EmeraldAIPlayerDamage.cs** script located in **Emerald AI/Scripts/Player**
 
-5. Apply the following settings changes (these will be included in NeoFPS update 1.0.03)
+5. Apply the following settings changes *(these will be included in NeoFPS update 1.0.03)*
   - In **Preferences/Layers and Tags** add a new tag called "AI"
   - In **Preferences/Physics** update the layer collision matrix so the the layer **IgnoreRaycasts** collides with the following layers:
     - **AiVisiblity**
@@ -32,7 +32,7 @@ The script **NeoFpsEmeraldAI_DamageHandler.cs** located in **NeoFPS_EmeraldAI/Sc
 The demo scene is a modified version of Emerald AI's **Playable Demo** scene. The character prefabs have been replaced with new ones as described below, and the player character has been replaced by a NeoFPS test setup spawner which spawns the standard NeoFPS demo character.
 
 #### Prefabs
-The three character prefabs from the original Emerald AI **Playable Demo** have been replaced with duplicates set up to work with NeoFPS. This involved the following changes:
+The three character prefabs from the original Emerald AI **Playable Demo** have been replaced with duplicates set up to work with NeoFPS. For reference (this does not need repeating for the demo), this involved the following changes:
 - Switched tag on root object to "AI" and layer to "Default"
 - On **EmeraldAISystem** component:
   - **Detection & Tags/Tag Options**
