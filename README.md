@@ -6,6 +6,8 @@ This repository was created using Unity 2018.1
 
 It requires the assets [NeoFPS](https://assetstore.unity.com/packages/templates/systems/neofps-150179?aid=1011l58Ft) and [Emerald AI](https://assetstore.unity.com/packages/tools/ai/emerald-ai-2-0-40199?aid=1011l58Ft).
 
+Last updated with version 1.0.04 of NeoFPS and 2.3.0.1 of Emerald AI
+
 ## Installation
 This integration example is intended to be dropped in to a fresh project along with NeoFPS and Emerald AI.
 
@@ -51,21 +53,8 @@ The three character prefabs from the original Emerald AI **Playable Demo** have 
 
 ## Issues
 
-#### Script Errors
-There are a few places in Emerald AI where the NeoFPS respawn system can destroy objects that are being tracked.
-
-The AI health bars record the main camera component for orientation and scaling purposes. If the camera is changed for any reason, the script will still orient towards the old camera, and if it is destroyed then the script will error each frame. This can be fixed by modifying the file **EmeraldAIHealthBar.cs** located at **Emerald AI/Scripts/UI** by adding the following at the top of the `Update()` method.
-```csharp
-void Update()
-{
-	if (m_Camera == null)
-		m_Camera = Camera.main;
-	
-	// Original contents here
-}
-```
-
-The AI projectiles store a target transform when fired. If the player character respawns while a projectile is in flight and targeting it, the script will error each frame. This is a more complicated fix due to the number of times the target transform is referenced in the code and so I would advise waiting for a fix from Emerald AI.
+#### Health Bar Requires Camera On Start
+Currently the AI health bars will check for a camera on start. This usually means that it grabs the NeoFPS scene camera attached to the spawn point. It will then not update after the player spawns or dies.
 
 #### Location Based Damage
 Emerald AI characters are hard coded to disable all colliders in their character heirarchy on initialisation in order to prevent attached ragdolls causing issues. Unfortunately this means that, without modifications, the Emerald AI characters cannot have location specific damage handlers such as head or eye crits and less vulnerable armoured sections. The code that performs this can be found in the file **EmeraldAIInitializer.cs** in the method `DisableRagdoll()`.

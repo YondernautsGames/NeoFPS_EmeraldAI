@@ -3792,7 +3792,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -3827,7 +3826,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -3862,7 +3860,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -3897,7 +3894,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -3932,7 +3928,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -3967,7 +3962,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4002,7 +3996,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4037,7 +4030,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4072,7 +4064,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4107,7 +4098,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4142,7 +4132,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4177,7 +4166,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4212,7 +4200,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4247,7 +4234,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4282,7 +4268,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4317,7 +4302,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4352,7 +4336,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4387,7 +4370,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4422,7 +4404,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4457,7 +4438,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4492,7 +4472,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4527,7 +4506,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4562,7 +4540,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4597,7 +4574,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4632,7 +4608,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4667,7 +4642,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4702,7 +4676,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4737,7 +4710,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4772,7 +4744,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4807,7 +4778,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4842,7 +4812,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4877,7 +4846,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4912,7 +4880,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4947,7 +4914,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -4982,7 +4948,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -5017,7 +4982,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e45ecfbc523606c46ae2d05e44a62f04, type: 2}
   m_StaticBatchInfo:
@@ -5347,72 +5311,57 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!95 &95038907825439724
 Animator:
   serializedVersion: 3
@@ -5422,7 +5371,7 @@ Animator:
   m_GameObject: {fileID: 1145493392046332}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0fd053b0bb4e3f64f9348aa052d23541, type: 3}
-  m_Controller: {fileID: 9100000, guid: c18a646ccc411dc4eb67d6adcd903821, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4f2d1657f4184d74dbc143b5c27f11ac, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5430,7 +5379,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114030334349383600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5477,8 +5425,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed907ec0d3ff2a4b90eb7a27b5fad73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  YOffSet: 0
   PreviousTarget: {fileID: 0}
   SearchForRandomTarget: 0
+  CurrentObstruction: {fileID: 0}
+  m_LookLerpValue: 0
+  m_TurnLerpValue: 0
+  LookWeightLerp2: 0
+  LookHeight: 0
+  PlayerDetection: 1
+  PlayerDetectionCooldown: 0
+  m_LookAtInProgress: 0
+  m_PreviousHeight: 0
+  DetectionTimer: 0
 --- !u!114 &114745223714255436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5503,6 +5462,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147c566cda086894c8206928a751fa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OffensiveAbilitiesList:
+  - {fileID: 11400000, guid: 77d824358e440674db3f7c21ac56f305, type: 2}
+  SupportAbilitiesList: []
+  SummoningAbilitiesList: []
+  CurrentAnimationIndex: 0
+  ActiveEffects: []
+  CurrentlyCreatedAbility: {fileID: 0}
+  Ability1AnimationIndex: 0
+  Ability1Odds: 70
+  Ability2AnimationIndex: 0
+  Ability3AnimationIndex: 0
+  Ability3Odds: 30
+  SummonsMultipleAI: 1
+  MaxAllowedSummonedAI: 1
+  TotalSummonedAI: 0
+  CurrentSummoner: {fileID: 0}
+  HealthPercentageToHeal: 30
+  HealingCooldownActive: 0
+  HealingCooldownSeconds: 8
+  m_AbilityPicked: 0
+  m_InitialTargetPosition: {x: 0, y: 0, z: 0}
+  TargetDetectionActive: 0
+  TurnAnimationTypeRef: 1
+  IdleActivated: 0
+  DetectionFrequency: 1
+  PlayerDetectionEventCooldown: 5
+  RangedAttackOffset: 0
+  HitPointTransform: {fileID: 0}
+  SwitchWeaponTypesCooldown: 5
+  SwitchWeaponTypesDistance: 7
+  YAimOffset: 0
+  CameraTag: MainCamera
+  m_HealthBarComponent: {fileID: 0}
   m_AttackAnimationClipMissing: 0
   ProjectileCollisionPointY: 2.55
   m_ProjectileCollisionPoint: {x: 12.9, y: 141.02, z: 64.7}
@@ -5519,6 +5511,8 @@ MonoBehaviour:
   DeathVolume: 0.7
   EquipVolume: 1
   UnequipVolume: 1
+  RangedEquipVolume: 1
+  RangedUnequipVolume: 1
   HeadLookWeightCombat: 0.5
   BodyLookWeightCombat: 0.35
   HeadLookWeightNonCombat: 1
@@ -5545,6 +5539,8 @@ MonoBehaviour:
   MitigationAmount: 50
   MaxBlockAngle: 75
   MaxDamageAngle: 75
+  MaxFiringAngle: 45
+  SurfaceNormal: {x: 0, y: 0, z: 0}
   MaxNormalAngle: 0
   MaxNormalAngleEditor: 25
   BlockOdds: 80
@@ -5563,6 +5559,8 @@ MonoBehaviour:
   Attacking: 0
   BackingUpTimer: 0
   BackingUpSeconds: 0
+  BackingUpSecondsMin: 3
+  BackingUpSecondsMax: 4
   RunAttackTimer: 0
   RunAttackSpeed: 0
   MinimumRunAttackSpeed: 2
@@ -5570,13 +5568,18 @@ MonoBehaviour:
   AttackTimer: 0
   GettingHit: 0
   HasTarget: 0
+  m_SwitchingWeaponTypes: 0
   TotalIdleAnimations: 1
   TotalHitAnimations: 1
   TotalCombatHitAnimations: 1
+  TotalRangedCombatHitAnimations: 1
   TotalEmoteAnimations: 1
   TotalAttackAnimations: 1
+  TotalRangedAttackAnimations: 1
   TotalRunAttackAnimations: 1
+  TotalRangedRunAttackAnimations: 1
   TotalDeathAnimations: 1
+  TotalRangedDeathAnimations: 1
   m_IdleAnimaionIndexOverride: 0
   MirrorWalkLeft: 0
   MirrorWalkRight: 0
@@ -5588,18 +5591,25 @@ MonoBehaviour:
   MirrorCombatRunRight: 0
   MirrorCombatTurnLeft: 0
   MirrorCombatTurnRight: 0
+  MirrorRangedCombatWalkLeft: 0
+  MirrorRangedCombatWalkRight: 0
+  MirrorRangedCombatRunLeft: 0
+  MirrorRangedCombatRunRight: 0
+  MirrorRangedCombatTurnLeft: 0
+  MirrorRangedCombatTurnRight: 0
   MirrorTurnLeft: 0
   MirrorTurnRight: 0
   ReverseWalkAnimation: 1
+  ReverseRangedWalkAnimation: 0
+  AngleToTurn: 0
   NonCombatAngleToTurn: 25
   CombatAngleToTurn: 10
   WeaponObject: {fileID: 0}
   DroppableWeaponObject: {fileID: 0}
-  WeaponObjectTransfrom: {fileID: 0}
-  WeaponObjectPosition: {x: 0, y: 0, z: 0}
-  WeaponObjectRotation: {x: 0, y: 0, z: 0}
+  RangedWeaponObject: {fileID: 0}
+  RangedDroppableWeaponObject: {fileID: 0}
   StationaryTurningSpeedCombat: 150
-  StationaryTurningSpeedNonCombat: 60
+  BackupTurningSpeed: 100
   MaxSlopeLimit: 30
   Acceleration: 1
   Deceleration: 0.5
@@ -5615,7 +5625,6 @@ MonoBehaviour:
   WaypointTimer: 0
   IdleAnimationSeconds: 3
   EmoteAnimationActive: 0
-  SpawnTestObject: {fileID: 0}
   NewDestination: {x: 0, y: 0, z: 0}
   ForceTransform: {fileID: 0}
   ReceivedRagdollForceAmount: 0
@@ -5651,6 +5660,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnPlayerDetectionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   OnAttackEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -5679,14 +5693,6 @@ MonoBehaviour:
   RandomDirection: 0
   TargetInView: 0
   ProjectileFirePosition: {x: 0, y: 0, z: 0}
-  Attack1HeatSeekingSeconds: 1
-  Attack2HeatSeekingSeconds: 1
-  Attack3HeatSeekingSeconds: 1
-  RunAttackHeatSeekingSeconds: 1
-  Attack1HeatSeekingRef: 0
-  Attack2HeatSeekingRef: 0
-  Attack3HeatSeekingRef: 0
-  RunAttackHeatSeekingRef: 0
   CurrentFaction: 0
   RelationTypeRef: 0
   FactionRelations: 
@@ -5695,50 +5701,15 @@ MonoBehaviour:
   FactionRelation3: 0
   FactionRelation4: 0
   FactionRelation5: 0
-  ProjectileTimeoutTime: 4.5
   StartingRunSpeed: 0
   StartingRunAnimationSpeed: 0
   StationaryIdleTimer: 0
   StationaryIdleSeconds: 0
   StationaryIdleSecondsMin: 3
   StationaryIdleSecondsMax: 6
-  Attack1CollisionEffect: {fileID: 1303674608091680, guid: 9fe31a225d3e06c418532624df7b6c5b,
-    type: 2}
-  Attack2CollisionEffect: {fileID: 0}
-  Attack3CollisionEffect: {fileID: 0}
-  RunAttackCollisionEffect: {fileID: 0}
-  Attack1ImpactSound: {fileID: 8300000, guid: 669f04d2a839f684ea054b117b70fa82, type: 3}
-  Attack2ImpactSound: {fileID: 0}
-  Attack3ImpactSound: {fileID: 0}
-  RunAttackImpactSound: {fileID: 0}
-  Attack1ProjectileSpeed: 30
-  Attack2ProjectileSpeed: 30
-  Attack3ProjectileSpeed: 30
-  RunAttackProjectileSpeed: 30
-  Attack1DisableOnCollision: 1
-  Attack2DisableOnCollision: 1
-  Attack3DisableOnCollision: 1
-  RunAttackDisableOnCollision: 1
-  Projectile1Updated: 0
-  Projectile2Updated: 0
-  Projectile3Updated: 0
-  RunProjectileUpdated: 0
-  BloodEffectUpdated: 0
-  Attack1CollisionSeconds: 0
-  Attack2CollisionSeconds: 0
-  Attack3CollisionSeconds: 0
-  RunAttackCollisionSeconds: 0
-  Effect1TimeoutSeconds: 3
-  Effect2TimeoutSeconds: 3
-  Effect3TimeoutSeconds: 3
-  RunEffectTimeoutSeconds: 3
   BloodEffectTimeoutSeconds: 3
+  BloodEffectsList: []
   PlayerYOffset: 0
-  Attack1Projectile: {fileID: 1376461332694426, guid: b8f46d298e69159488a6d5a442294fe1,
-    type: 2}
-  Attack2Projectile: {fileID: 0}
-  Attack3Projectile: {fileID: 0}
-  RunAttackProjectile: {fileID: 0}
   CurrentProjectile: {fileID: 0}
   ProjectileDirection: {x: 0, y: 0, z: 0}
   potentialTargets: []
@@ -5764,6 +5735,14 @@ MonoBehaviour:
   HitAnimationList:
   - AnimationSpeed: 1
     AnimationClip: {fileID: 0}
+  RangedAttackAnimationList:
+  - AnimationSpeed: 1
+    AnimationClip: {fileID: 7400002, guid: 5718e4e88cc938348bc7e3582f5e79e1, type: 3}
+  RangedCombatHitAnimationList: []
+  RangedRunAttackAnimationList: []
+  RangedDeathAnimationList:
+  - AnimationSpeed: 1
+    AnimationClip: {fileID: 7400002, guid: 122a0277cf23ac949924d2ff8d9aba5d, type: 3}
   CurrentAnimationClip: {fileID: 0}
   Attack1Animation: {fileID: 7400002, guid: 5718e4e88cc938348bc7e3582f5e79e1, type: 3}
   Attack2Animation: {fileID: 0}
@@ -5793,7 +5772,7 @@ MonoBehaviour:
   RunStraightAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
     type: 3}
   RunRightAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304, type: 3}
-  Emote1Animation: {fileID: 0}
+  Emote1Animation: {fileID: 7400002, guid: 65632509296515d4ca211c086bf58dc9, type: 3}
   Emote2Animation: {fileID: 0}
   Emote3Animation: {fileID: 0}
   CombatIdleAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304, type: 3}
@@ -5824,6 +5803,43 @@ MonoBehaviour:
   Death1Animation: {fileID: 7400002, guid: 122a0277cf23ac949924d2ff8d9aba5d, type: 3}
   Death2Animation: {fileID: 0}
   Death3Animation: {fileID: 0}
+  RangedCombatIdleAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedCombatWalkLeftAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedCombatWalkStraightAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedCombatWalkBackAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedCombatWalkRightAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedCombatRunLeftAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedCombatRunStraightAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedCombatRunRightAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedIdleWarningAnimation: {fileID: 0}
+  RangedPutAwayWeaponAnimation: {fileID: 0}
+  RangedPullOutWeaponAnimation: {fileID: 0}
+  RangedAttack1Animation: {fileID: 7400002, guid: 5718e4e88cc938348bc7e3582f5e79e1,
+    type: 3}
+  RangedAttack2Animation: {fileID: 0}
+  RangedAttack3Animation: {fileID: 0}
+  RangedRunAttack1Animation: {fileID: 0}
+  RangedRunAttack2Animation: {fileID: 0}
+  RangedRunAttack3Animation: {fileID: 0}
+  RangedCombatHit1Animation: {fileID: 0}
+  RangedCombatHit2Animation: {fileID: 0}
+  RangedCombatHit3Animation: {fileID: 0}
+  RangedCombatTurnLeftAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedCombatTurnRightAnimation: {fileID: 7400002, guid: d3ac7e6dcff6d42489756276610de304,
+    type: 3}
+  RangedDeath1Animation: {fileID: 7400002, guid: 122a0277cf23ac949924d2ff8d9aba5d,
+    type: 3}
+  RangedDeath2Animation: {fileID: 0}
+  RangedDeath3Animation: {fileID: 0}
   AnimatorControllerGenerated: 1
   AnimationListsChanged: 0
   FilePath: Assets/Emerald AI/Example Animators/Golem Controller.overrideController
@@ -5843,16 +5859,19 @@ MonoBehaviour:
   DamageAmount3: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 4
-  TemperamentTabNumber: 6
+  TabNumber: 3
+  TemperamentTabNumber: 2
   DetectionTagsTabNumber: 1
-  AnimationTabNumber: 1
+  AnimationTabNumber: 2
   SoundTabNumber: 1
   MovementTabNumber: 1
+  WeaponTypeTabNumber: 0
+  WeaponTypeCombatTabNumber: 0
+  WeaponTypeControlTabNumber: 0
   AttackAnimationNumber: 1
   RunAttackAnimationNumber: 1
   IdleAnimationNumber: 1
-  CombatTabNumber: 1
+  CombatTabNumber: 0
   EventTabNumber: 1
   MinimumWaitTime: 3
   MaximumWaitTime: 6
@@ -5873,6 +5892,7 @@ MonoBehaviour:
   MaximumDamageAmount3: 5
   MinimumDamageAmountRun: 2
   MaximumDamageAmountRun: 5
+  WalkBackwardsSpeed: 1
   WalkSpeed: 2
   RunSpeed: 5
   ExpandedFieldOfViewAngle: 300
@@ -5881,8 +5901,12 @@ MonoBehaviour:
   MaxChaseDistance: 50
   AngleNeededToTurn: 10
   AngleNeededToTurnRunning: 30
+  StartingTooCloseDistance: 2
   TooCloseDistance: 2
+  RangedTooCloseDistance: 5
+  StartingAttackDistance: 4
   AttackDistance: 10
+  RangedAttackDistance: 25
   RunAttackDistance: 3
   CautiousSeconds: 8
   DeactivateDelay: 5
@@ -5896,10 +5920,6 @@ MonoBehaviour:
   StoppingDistance: 4
   FollowingStoppingDistance: 5
   DistanceOffset: 1
-  RunAttackDelay: 0.4
-  Attack1Delay: 0.4
-  Attack2Delay: 0.4
-  Attack3Delay: 0.4
   DistanceFromTarget: 0
   AgentRadius: 0.5
   AgentBaseOffset: 0
@@ -5912,21 +5932,34 @@ MonoBehaviour:
   Idle2AnimationSpeed: 1
   Idle3AnimationSpeed: 1
   IdleWarningAnimationSpeed: 1
+  RangedIdleWarningAnimationSpeed: 1
   IdleCombatAnimationSpeed: 1
+  RangedIdleCombatAnimationSpeed: 1
   IdleNonCombatAnimationSpeed: 1
   Attack1AnimationSpeed: 1
   Attack2AnimationSpeed: 1
   Attack3AnimationSpeed: 1
+  RangedAttack1AnimationSpeed: 1
+  RangedAttack2AnimationSpeed: 1
+  RangedAttack3AnimationSpeed: 1
   RunAttack1AnimationSpeed: 1
   RunAttack2AnimationSpeed: 1
   RunAttack3AnimationSpeed: 1
+  RangedRunAttack1AnimationSpeed: 1
+  RangedRunAttack2AnimationSpeed: 1
+  RangedRunAttack3AnimationSpeed: 1
   TurnLeftAnimationSpeed: 1
   TurnRightAnimationSpeed: 1
   CombatTurnLeftAnimationSpeed: 1
   CombatTurnRightAnimationSpeed: 1
+  RangedCombatTurnLeftAnimationSpeed: 1
+  RangedCombatTurnRightAnimationSpeed: 1
   Death1AnimationSpeed: 1
   Death2AnimationSpeed: 1
   Death3AnimationSpeed: 1
+  RangedDeath1AnimationSpeed: 1
+  RangedDeath2AnimationSpeed: 1
+  RangedDeath3AnimationSpeed: 1
   Emote1AnimationSpeed: 1
   Emote2AnimationSpeed: 1
   Emote3AnimationSpeed: 1
@@ -5936,12 +5969,17 @@ MonoBehaviour:
   NonCombatRunAnimationSpeed: 1.4
   CombatWalkAnimationSpeed: 1.4
   CombatRunAnimationSpeed: 1.4
+  RangedCombatWalkAnimationSpeed: 1
+  RangedCombatRunAnimationSpeed: 1
   Hit1AnimationSpeed: 1
   Hit2AnimationSpeed: 1
   Hit3AnimationSpeed: 1
   CombatHit1AnimationSpeed: 1
   CombatHit2AnimationSpeed: 1
   CombatHit3AnimationSpeed: 1
+  RangedCombatHit1AnimationSpeed: 1
+  RangedCombatHit2AnimationSpeed: 1
+  RangedCombatHit3AnimationSpeed: 1
   StartingBehaviorRef: 0
   StartingConfidenceRef: 0
   SingleDestination: {x: 0, y: 0, z: 0}
@@ -5983,18 +6021,10 @@ MonoBehaviour:
   UseRunAttacksRef: 1
   UseMagicEffectsPackRef: 0
   WeaponTypeRef: 1
-  Attack1EffectOnCollisionRef: 1
-  Attack2EffectOnCollisionRef: 0
-  Attack3EffectOnCollisionRef: 0
-  RunAttackEffectOnCollisionRef: 0
-  Attack1SoundOnCollisionRef: 1
-  Attack2SoundOnCollisionRef: 0
-  Attack3SoundOnCollisionRef: 0
-  RunAttackSoundOnCollisionRef: 0
+  StartingWeaponTypeRef: 0
   AvoidanceQualityRef: 2
   TargetObstructedActionRef: 0
   RangedAttackTransform: {fileID: 4867552650870718}
-  DisableProjectileOnCollision: 0
   CurrentTarget: {fileID: 0}
   CurrentFollowTarget: {fileID: 0}
   PlayerTag: Player
@@ -6010,16 +6040,13 @@ MonoBehaviour:
   UseWeaponObject: 0
   UseHitAnimations: 0
   UseDroppableWeapon: 1
-  ArrowProjectileAttack1: 0
-  ArrowProjectileAttack2: 0
-  ArrowProjectileAttack3: 0
-  ArrowProjectileRunAttack: 0
   EnableDebugging: 0
   DrawRaycastsEnabled: 0
   DebugLogTargetsEnabled: 0
   DebugLogObstructionsEnabled: 0
   UseAggro: 1
   AutoEnableAnimatePhysics: 1
+  EnableBothWeaponTypes: 0
   TotalLODsRef: 1
   HasMultipleLODsRef: 0
   ReturningToStartInProgress: 0
@@ -6044,6 +6071,8 @@ MonoBehaviour:
   DamageEffectInhibitor: 0
   SheatheWeapon: {fileID: 0}
   UnsheatheWeapon: {fileID: 0}
+  RangedSheatheWeapon: {fileID: 0}
+  RangedUnsheatheWeapon: {fileID: 0}
   IdleSounds: []
   AttackSounds: []
   InjuredSounds: []
@@ -6062,7 +6091,6 @@ MonoBehaviour:
   OpposingFaction5: 1
   BloodPosOffset: {x: 0, y: 0, z: 0}
   BloodEffectPositionTypeRef: 1
-  BloodEffect: {fileID: 0}
   HealthBarCanvas: {fileID: 0}
   HealthBarImage: {fileID: 0}
   HealthBarBackgroundImage: {fileID: 0}
@@ -6075,6 +6103,7 @@ MonoBehaviour:
   HealthBarColor: {r: 1, g: 0.8482759, b: 0, a: 1}
   HealthBarBackgroundColor: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
   CombatTextColor: {r: 0.77254903, g: 0.16078432, b: 0.16078432, a: 1}
+  CombatTextCriticalHitColor: {r: 0.77254903, g: 0.003921569, b: 0.003921569, a: 1}
   NameTextColor: {r: 1, g: 0.8482759, b: 0, a: 1}
   LevelTextColor: {r: 1, g: 1, b: 1, a: 1}
   HealthBarScale: {x: 0.75, y: 1, z: 1}
@@ -6089,6 +6118,7 @@ MonoBehaviour:
   IsDead: 0
   AttackSpeed: 1
   WaitTime: 5
+  CombatTextIndex: 0
   HeadLookRef: {fileID: 0}
   LineOfSightRef: {fileID: 0}
   PassiveTargetRef: {fileID: 0}
@@ -6118,12 +6148,16 @@ MonoBehaviour:
   RandomOffset: {x: 0, y: 0, z: 0}
   StartingTag: 
   StartingLayer: 0
+  m_AnimationProfile: {fileID: 11400000, guid: 780ff812b04b78f4a8144f61434c5d5a, type: 2}
   DetectionLayerMask:
     serializedVersion: 2
     m_Bits: 67182592
   ObstructionDetectionLayerMask:
     serializedVersion: 2
     m_Bits: 4
+  UILayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
   AlignmentLayerMask:
     serializedVersion: 2
     m_Bits: 1

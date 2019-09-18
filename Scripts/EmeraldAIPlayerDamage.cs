@@ -7,6 +7,8 @@ namespace EmeraldAI
 {
     public class EmeraldAIPlayerDamage : MonoBehaviour, NeoFPS.IDamageSource
     {
+        public List<string> ActiveEffects = new List<string>();
+
         const float k_KickDistance = 0.02f;
         const float k_KickRotation = 5f;
         const float k_KickDuration = 0.5f;
@@ -40,7 +42,7 @@ namespace EmeraldAI
         }
 
         void DamageNeoFpsPlayer(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent)
-        {            
+        {        
             // Damage the player health
             var health = GetComponent<NeoFPS.IHealthManager>();
             if (health == null)
