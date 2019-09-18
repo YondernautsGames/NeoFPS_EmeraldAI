@@ -42,7 +42,7 @@ namespace EmeraldAI
         }
 
         void DamageNeoFpsPlayer(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent)
-        {        
+        {
             // Damage the player health
             var health = GetComponent<NeoFPS.IHealthManager>();
             if (health == null)
@@ -50,7 +50,7 @@ namespace EmeraldAI
 
             m_AI = EmeraldComponent;
             health.AddDamage(DamageAmount, false, this);
-            
+
             // Get character head kicker
             var character = GetComponent<NeoFPS.ICharacter>();
             if (character == null)
