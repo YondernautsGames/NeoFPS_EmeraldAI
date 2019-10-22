@@ -17,7 +17,7 @@ This integration example is intended to be dropped in to a fresh project along w
 
 3. Clone this repository to a folder inside the project Assets folder such as "NeoFPS_EmeraldAI"
 
-4. Remove the **EmeraldAIPlayerDamage.cs** script located in **Emerald AI/Scripts/Player**
+4. Remove the **EmeraldAIPlayerDamage.cs** script located in **Emerald AI/Scripts/Components**
 
 5. Apply the following settings changes *(these will be included in NeoFPS update 1.0.03)*
   - In **Preferences/Layers and Tags** add a new tag called "AI"

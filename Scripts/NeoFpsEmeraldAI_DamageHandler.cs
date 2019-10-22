@@ -64,6 +64,16 @@ namespace NeoFPS.EmeraldAI
                 return DamageResult.Ignored;
         }
 
+        public DamageResult AddDamage(float damage, RaycastHit hit)
+        {
+            return AddDamage(damage);
+        }
+
+        public DamageResult AddDamage(float damage, RaycastHit hit, IDamageSource source)
+        {
+            return AddDamage(damage, source);
+        }
+
         #endregion
     }
 }
