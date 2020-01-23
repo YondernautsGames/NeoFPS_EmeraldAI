@@ -5454,6 +5454,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 77d824358e440674db3f7c21ac56f305, type: 2}
   SupportAbilitiesList: []
   SummoningAbilitiesList: []
+  AttackOnArrival: 0
+  CriticalHit: 0
+  TargetInAngleLimit: 0
   CurrentAnimationIndex: 0
   ActiveEffects: []
   CurrentlyCreatedAbility: {fileID: 0}
@@ -5481,7 +5484,7 @@ MonoBehaviour:
   SwitchWeaponTypesCooldown: 5
   SwitchWeaponTypesDistance: 7
   YAimOffset: 0
-  CameraTag: MainCamera
+  CameraTag: Player
   m_HealthBarComponent: {fileID: 0}
   DebugLogMissingAnimations: 0
   AttackHeight: 5
@@ -5705,14 +5708,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnKillTargetEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   IdleSoundsSeconds: 0
   IdleSoundsSecondsMin: 5
   IdleSoundsSecondsMax: 10
   IdleSoundsTimer: 0
   CurrentAttacks: 0
-  ExpandedChaseDistance: 80
+  ExpandedChaseDistance: 200
   StartingChaseDistance: 0
-  ExpandedDetectionRadius: 40
+  ExpandedDetectionRadius: 150
   StartingDetectionRadius: 0
   IsRunAttack: 0
   RandomDirection: 0
@@ -5880,16 +5888,16 @@ MonoBehaviour:
   ObstructionDetectionUpdateTimer: 0
   CurrentHealth: 0
   StartingHealth: 30
-  DetectionRadius: 20
+  DetectionRadius: 50
   CurrentDamageAmount: 5
   DamageAmount1: 5
   DamageAmount2: 5
   DamageAmount3: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 2
+  TabNumber: 3
   TemperamentTabNumber: 2
-  DetectionTagsTabNumber: 1
+  DetectionTagsTabNumber: 0
   AnimationTabNumber: 3
   SoundTabNumber: 1
   MovementTabNumber: 1
@@ -5920,13 +5928,16 @@ MonoBehaviour:
   MaximumDamageAmount3: 5
   MinimumDamageAmountRun: 2
   MaximumDamageAmountRun: 5
+  CritChance: 15
+  CritMultiplier: 2
+  UseCriticalHits: 0
   WalkBackwardsSpeed: 1
   WalkSpeed: 2
   RunSpeed: 5
   ExpandedFieldOfViewAngle: 300
   fieldOfViewAngle: 180
   fieldOfViewAngleRef: 0
-  MaxChaseDistance: 30
+  MaxChaseDistance: 120
   AngleNeededToTurn: 10
   AngleNeededToTurnRunning: 30
   StartingTooCloseDistance: 2
@@ -6017,7 +6028,7 @@ MonoBehaviour:
   Renderer4: {fileID: 0}
   DeathTypeRef: 0
   BehaviorRef: 0
-  DetectionTypeRef: 0
+  DetectionTypeRef: 1
   MaxChaseDistanceTypeRef: 0
   ConfidenceRef: 2
   OptimizedStateRef: 1
@@ -6025,12 +6036,10 @@ MonoBehaviour:
   TargetTypeRef: 0
   CombatStateRef: 0
   CreateHealthBarsRef: 1
-  UseCombatTextRef: 0
   CombatTypeRef: 0
   RandomizeDamageRef: 1
   CustomizeHealthBarRef: 0
   UseCustomFontRef: 0
-  AnimateCombatTextRef: 0
   DisplayAINameRef: 1
   DisplayAITitleRef: 0
   DisplayAILevelRef: 0
@@ -6123,16 +6132,10 @@ MonoBehaviour:
   HealthBarCanvas: {fileID: 0}
   HealthBarImage: {fileID: 0}
   HealthBarBackgroundImage: {fileID: 0}
-  CombatTextFont: {fileID: 0}
-  CombatTextObject: {fileID: 0}
   HealthBarPos: {x: 0, y: 4.15, z: 0}
   CombatTextPos: {x: 0, y: 1.75, z: 0}
-  StartingCombatTextSize: 0.065
-  EndingCombatTextSize: 0.09
   HealthBarColor: {r: 0.851918, g: 0.8602941, b: 0.25302765, a: 1}
   HealthBarBackgroundColor: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
-  CombatTextColor: {r: 0.77254903, g: 0.16078432, b: 0.16078432, a: 1}
-  CombatTextCriticalHitColor: {r: 0.77254903, g: 0.003921569, b: 0.003921569, a: 1}
   NameTextColor: {r: 0.851918, g: 0.8602941, b: 0.25302765, a: 1}
   LevelTextColor: {r: 1, g: 1, b: 1, a: 1}
   HealthBarScale: {x: 0.75, y: 1, z: 1}
@@ -6147,7 +6150,7 @@ MonoBehaviour:
   IsDead: 0
   AttackSpeed: 1
   WaitTime: 5
-  CombatTextIndex: 0
+  DamageReceived: 0
   HeadLookRef: {fileID: 0}
   LineOfSightRef: {fileID: 0}
   PassiveTargetRef: {fileID: 0}
@@ -6161,12 +6164,9 @@ MonoBehaviour:
   AIRigidbody: {fileID: 0}
   TargetEmerald: {fileID: 0}
   HealthBar: {fileID: 0}
-  CombatTextParent: {fileID: 0}
-  CombatTextList: []
   TextName: {fileID: 0}
   TextLevel: {fileID: 0}
   HealthBarCanvasRef: {fileID: 0}
-  lookRotation: {x: 0, y: 0, z: 0, w: 0}
   WaypointsList: []
   WaypointIndex: 0
   WaypointHolder: {fileID: 0}
@@ -6183,10 +6183,10 @@ MonoBehaviour:
     m_Bits: 67108864
   ObstructionDetectionLayerMask:
     serializedVersion: 2
-    m_Bits: 2560
+    m_Bits: 8395264
   UILayerMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 32
   AlignmentLayerMask:
     serializedVersion: 2
     m_Bits: 1

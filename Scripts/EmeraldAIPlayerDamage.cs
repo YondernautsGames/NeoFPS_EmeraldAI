@@ -36,12 +36,15 @@ namespace EmeraldAI
             get { return m_AI.AIName; }
         }
 
-        public void SendPlayerDamage(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent)
+        public void SendPlayerDamage(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent, bool CriticalHit = false)
         {
-            DamageNeoFpsPlayer(DamageAmount, Target, EmeraldComponent);
+            DamageNeoFpsPlayer(DamageAmount, Target, EmeraldComponent, CriticalHit);
+
+            //Creates damage text on the player's position, if enabled.
+            CombatTextSystem.Instance.CreateCombatText(DamageAmount, transform.position, CriticalHit, false, true);
         }
 
-        void DamageNeoFpsPlayer(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent)
+        void DamageNeoFpsPlayer(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent, bool critical)
         {
             // Damage the player health
             var health = GetComponent<NeoFPS.IHealthManager>();
@@ -49,7 +52,7 @@ namespace EmeraldAI
                 return;
 
             m_AI = EmeraldComponent;
-            health.AddDamage(DamageAmount, false, this);
+            health.AddDamage(DamageAmount, critical, this);
 
             // Get character head kicker
             var character = GetComponent<NeoFPS.ICharacter>();
