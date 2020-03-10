@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 65339123867244710}
   - component: {fileID: 114535643438424054}
   - component: {fileID: 114021029213064234}
+  - component: {fileID: 114409857913008594}
   m_Layer: 0
   m_Name: NeoFpsEmeraldAI_FallenGuardian
   m_TagString: AI
@@ -2654,6 +2655,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c9845b0efa8eb4aa8f90b7f148e2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114409857913008594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493349518984564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421f12c4cc2c4614f9e0616ef942cf44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SaveName: 0
+  m_Position: 0
+  m_Rotation: 0
+  m_LocalScale: 0
+  m_FilterChildObjects: 0
+  m_ChildObjects: []
+  m_FilterNeoComponents: 0
+  m_NeoComponents: []
+  m_OtherComponents:
+  - {fileID: 95519134439709580}
+  m_Overrides: []
+  m_Children:
+    m_Keys: 
+    m_Values: []
+    m_GameObject: {fileID: 114409857913008594}
+  m_PrefabStrongID: -196645653
+  expandChildObjects: 0
+  expandNeoComponents: 0
+  expandOtherComponents: 1
+  prefabGuid: 39bc3b0c6870ac146a6c03f5665a233d
 --- !u!114 &114529813520341630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2692,6 +2724,9 @@ MonoBehaviour:
   OffensiveAbilitiesList: []
   SupportAbilitiesList: []
   SummoningAbilitiesList: []
+  AttackOnArrival: 0
+  CriticalHit: 0
+  TargetInAngleLimit: 0
   CurrentAnimationIndex: 0
   ActiveEffects: []
   CurrentlyCreatedAbility: {fileID: 0}
@@ -2733,7 +2768,7 @@ MonoBehaviour:
   RunFootstepVolume: 0.1
   BlockVolume: 0.65
   ImpactVolume: 1
-  InjuredVolume: 1
+  InjuredVolume: 0.452
   AttackVolume: 1
   WarningVolume: 1
   DeathVolume: 0.7
@@ -2932,6 +2967,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnKillTargetEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   IdleSoundsSeconds: 0
   IdleSoundsSecondsMin: 5
   IdleSoundsSecondsMax: 10
@@ -3095,8 +3135,8 @@ MonoBehaviour:
   DamageAmount3: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 2
-  TemperamentTabNumber: 5
+  TabNumber: 4
+  TemperamentTabNumber: 2
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 2
   SoundTabNumber: 1
@@ -3107,7 +3147,7 @@ MonoBehaviour:
   AttackAnimationNumber: 1
   RunAttackAnimationNumber: 1
   IdleAnimationNumber: 1
-  CombatTabNumber: 1
+  CombatTabNumber: 0
   EventTabNumber: 0
   MinimumWaitTime: 3
   MaximumWaitTime: 6
@@ -3128,6 +3168,9 @@ MonoBehaviour:
   MaximumDamageAmount3: 5
   MinimumDamageAmountRun: 2
   MaximumDamageAmountRun: 5
+  CritChance: 15
+  CritMultiplier: 2
+  UseCriticalHits: 0
   WalkBackwardsSpeed: 1
   WalkSpeed: 2
   RunSpeed: 5
@@ -3232,13 +3275,11 @@ MonoBehaviour:
   CurrentDetectionRef: 1
   TargetTypeRef: 0
   CombatStateRef: 0
-  CreateHealthBarsRef: 1
-  UseCombatTextRef: 0
+  CreateHealthBarsRef: 0
   CombatTypeRef: 0
   RandomizeDamageRef: 0
   CustomizeHealthBarRef: 0
   UseCustomFontRef: 0
-  AnimateCombatTextRef: 0
   DisplayAINameRef: 1
   DisplayAITitleRef: 0
   DisplayAILevelRef: 0
@@ -3332,16 +3373,10 @@ MonoBehaviour:
   HealthBarCanvas: {fileID: 0}
   HealthBarImage: {fileID: 0}
   HealthBarBackgroundImage: {fileID: 0}
-  CombatTextFont: {fileID: 0}
-  CombatTextObject: {fileID: 0}
   HealthBarPos: {x: 0, y: 3, z: 0}
   CombatTextPos: {x: 0, y: 1.75, z: 0}
-  StartingCombatTextSize: 0.065
-  EndingCombatTextSize: 0.09
   HealthBarColor: {r: 0.77254903, g: 0.16078432, b: 0.16078432, a: 1}
   HealthBarBackgroundColor: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
-  CombatTextColor: {r: 0.77254903, g: 0.16078432, b: 0.16078432, a: 1}
-  CombatTextCriticalHitColor: {r: 0.77254903, g: 0.003921569, b: 0.003921569, a: 1}
   NameTextColor: {r: 1, g: 0, b: 0, a: 1}
   LevelTextColor: {r: 1, g: 1, b: 1, a: 1}
   HealthBarScale: {x: 0.75, y: 1, z: 1}
@@ -3356,7 +3391,7 @@ MonoBehaviour:
   IsDead: 0
   AttackSpeed: 1
   WaitTime: 5
-  CombatTextIndex: 0
+  DamageReceived: 0
   HeadLookRef: {fileID: 0}
   LineOfSightRef: {fileID: 0}
   PassiveTargetRef: {fileID: 0}
@@ -3370,12 +3405,9 @@ MonoBehaviour:
   AIRigidbody: {fileID: 0}
   TargetEmerald: {fileID: 0}
   HealthBar: {fileID: 0}
-  CombatTextParent: {fileID: 0}
-  CombatTextList: []
   TextName: {fileID: 0}
   TextLevel: {fileID: 0}
   HealthBarCanvasRef: {fileID: 0}
-  lookRotation: {x: 0, y: 0, z: 0, w: 0}
   WaypointsList:
   - {x: 2188.8665, y: 64.166725, z: 2022.3032}
   - {x: 2207.7927, y: 64.166725, z: 2009.0287}
@@ -3401,7 +3433,7 @@ MonoBehaviour:
     m_Bits: 8395265
   UILayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32
   AlignmentLayerMask:
     serializedVersion: 2
     m_Bits: 1

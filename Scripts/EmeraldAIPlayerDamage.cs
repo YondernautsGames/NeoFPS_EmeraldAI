@@ -41,7 +41,7 @@ namespace EmeraldAI
             DamageNeoFpsPlayer(DamageAmount, Target, EmeraldComponent, CriticalHit);
 
             //Creates damage text on the player's position, if enabled.
-            CombatTextSystem.Instance.CreateCombatText(DamageAmount, transform.position, CriticalHit, false, true);
+            //CombatTextSystem.Instance.CreateCombatText(DamageAmount, transform.position, CriticalHit, false, true);
         }
 
         void DamageNeoFpsPlayer(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent, bool critical)

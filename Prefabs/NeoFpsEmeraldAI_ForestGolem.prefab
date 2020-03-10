@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 65988300878643216}
   - component: {fileID: 114111775303426584}
   - component: {fileID: 114723079147915860}
+  - component: {fileID: 114989952322735106}
   m_Layer: 0
   m_Name: NeoFpsEmeraldAI_ForestGolem
   m_TagString: AI
@@ -5484,7 +5485,7 @@ MonoBehaviour:
   SwitchWeaponTypesCooldown: 5
   SwitchWeaponTypesDistance: 7
   YAimOffset: 0
-  CameraTag: Player
+  CameraTag: MainCamera
   m_HealthBarComponent: {fileID: 0}
   DebugLogMissingAnimations: 0
   AttackHeight: 5
@@ -5498,7 +5499,7 @@ MonoBehaviour:
   RunFootstepVolume: 0.1
   BlockVolume: 0.65
   ImpactVolume: 1
-  InjuredVolume: 1
+  InjuredVolume: 0.452
   AttackVolume: 1
   WarningVolume: 1
   DeathVolume: 0.7
@@ -5895,7 +5896,7 @@ MonoBehaviour:
   DamageAmount3: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 3
+  TabNumber: 4
   TemperamentTabNumber: 2
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 3
@@ -6217,6 +6218,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c9845b0efa8eb4aa8f90b7f148e2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114989952322735106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117380127409372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421f12c4cc2c4614f9e0616ef942cf44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SaveName: 0
+  m_Position: 0
+  m_Rotation: 0
+  m_LocalScale: 0
+  m_FilterChildObjects: 0
+  m_ChildObjects: []
+  m_FilterNeoComponents: 0
+  m_NeoComponents: []
+  m_OtherComponents:
+  - {fileID: 95632768499895776}
+  m_Overrides: []
+  m_Children:
+    m_Keys: 
+    m_Values: []
+    m_GameObject: {fileID: 114989952322735106}
+  m_PrefabStrongID: 66417012
+  expandChildObjects: 0
+  expandNeoComponents: 0
+  expandOtherComponents: 1
+  prefabGuid: 727208bb82b27b44a986c6a9444b192d
 --- !u!195 &195280181559040784
 NavMeshAgent:
   m_ObjectHideFlags: 1

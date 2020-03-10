@@ -61,6 +61,33 @@ Emerald AI characters are hard coded to disable all colliders in their character
 
 I have requested that this method and the equivalent `EnableRagdoll()` be made virtual so that a custom derived initialiser can be used instead that separates the ragdoll from the damage colliders.
 
+#### Object Pool & Async Scene Load
+The Emerald AI system creates an object pool for efficient reuse of objects like projectiles. During async loads (such as behind the NeoFPS loading screen), the pool can be created in the wrong scene, and then destroyed before it is used.
+
+A simple temporary fix is to replace the following code in *EmeraldAIInitializer.cs* (line 109+):
+```
+if (EmeraldAISystem.ObjectPool == null)
+{
+	EmeraldAISystem.ObjectPool = new GameObject();
+	EmeraldAISystem.ObjectPool.name = "Emerald Object Pool";
+}
+```
+with 
+```
+if (EmeraldAISystem.ObjectPool == null)
+{
+	EmeraldAISystem.ObjectPool = new GameObject();
+	EmeraldAISystem.ObjectPool.name = "Emerald Object Pool";
+	DontDestroyOnLoad(EmeraldAISystem.ObjectPool);
+}
+```
+
+Once a better solution is available or the bug is fixed, this readme will be updated.
+
+#### Save Games Not Currently Implemented
+
+The NeoFPS save games system has not yet been integrated with Emerald AI. This should hopefully happen in the near future.
+
 ## Future Work
 This integration will be updated along with any major updates to Emerald AI, and when new features are added to NeoFPS. For example, the damage handlers will be altered to enable blocking when the additional NeoFPS melee features are added.
 
