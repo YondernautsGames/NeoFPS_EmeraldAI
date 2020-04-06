@@ -38,7 +38,13 @@ namespace NeoFPS.EmeraldAI
         {
             if (m_Multiplier > 0f)
             {
-                m_EmeraldAISystem.Damage(Mathf.CeilToInt(damage * m_Multiplier));
+                int scaledDamage = Mathf.CeilToInt(damage * m_Multiplier);
+
+                if (CombatTextSystem.Instance != null)
+                    CombatTextSystem.Instance.CreateCombatTextAI(scaledDamage, transform.position, m_Critical, false);
+
+                m_EmeraldAISystem.Damage(scaledDamage);
+
                 return m_Critical ? DamageResult.Critical : DamageResult.Standard;
             }
             else
@@ -53,11 +59,17 @@ namespace NeoFPS.EmeraldAI
             // Apply damage
             if (m_Multiplier > 0f)
             {
+                int scaledDamage = Mathf.CeilToInt(damage * m_Multiplier);
+
+                if (CombatTextSystem.Instance != null)
+                    CombatTextSystem.Instance.CreateCombatTextAI(scaledDamage, transform.position, m_Critical, false);
+
                 m_EmeraldAISystem.Damage(
-                    Mathf.CeilToInt(damage * m_Multiplier),
+                    scaledDamage,
                     source.controller.isPlayer ? EmeraldAISystem.TargetType.Player : EmeraldAISystem.TargetType.AI,
                     source.controller.currentCharacter.transform
                     );
+
                 return m_Critical ? DamageResult.Critical : DamageResult.Standard;
             }
             else
