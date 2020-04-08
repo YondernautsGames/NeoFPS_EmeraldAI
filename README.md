@@ -27,7 +27,7 @@ There is a new custom **EmeraldAIPlayerDamage.cs** in **NeoFPS_EmeraldAI/Scripts
 
 The script **NeoFpsEmeraldAI_DamageHandler.cs** located in **NeoFPS_EmeraldAI/Scripts** is a NeoFPS damage handler which passes damage to the Emerald AI character as well as letting the character know the damage source. This must be added to all Emerald AI characters so the player can damage them.
 
-The script **NeoFpsEmeraldAI_PoolChecker.cs** is required for Emerald AI to work with async scene loading. This should be present in every scene and the easiest way is by adding it to any Emerald AI characters.
+The script **NeoFpsEmeraldAI_AsyncLoadFixer.cs** is required for Emerald AI to work with async scene loading. This should be present in every scene and the easiest way is by adding it to any Emerald AI characters.
 
 #### Demo Scene
 The demo scene is a modified version of Emerald AI's **Playable Demo** scene. The character prefabs have been replaced with new ones as described below, and the player character has been replaced by a NeoFPS test setup spawner which spawns the standard NeoFPS demo character.
