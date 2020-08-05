@@ -71,12 +71,13 @@ namespace NeoFPS.EmeraldAI
         // Using this class requires modifying the Emerald AI source code, so it is sensitive to changes in the API.
         // To use it you will need to perform the following steps:
         // 1 - In the EmeraldAIInitializer.cs script, make the EmeraldComponent protected
-        // 2 - make the EnableRagdoll() and DisableRagdoll() methods virtual
-        // 3 - Replace the Emerald AI Initializer component on your AI with this class
-        // 4 - Add any ragdoll colliders to the m_RagdollColliders array in the inspector
-        // 5 - Move the root object of the Emerald AI character (only the root object) to the CharacterControllers layer
-        // 6 - Remove the NeoFpsEmeraldAI_DamageHandler component from the root object of the character
-        // 7 - Add damage handlers to the character's skeleton (eg, limbs, head and torso)
+        // 2 - Make the EnableRagdoll() and DisableRagdoll() methods virtual
+		// 3 - Uncomment the code above
+        // 4 - Replace the Emerald AI Initializer component on your AI with this class
+        // 5 - Add any ragdoll colliders to the m_RagdollColliders array in the inspector
+        // 6 - Move the root object of the Emerald AI character (only the root object) to the CharacterControllers layer
+        // 7 - Remove the NeoFpsEmeraldAI_DamageHandler component from the root object of the character
+        // 8 - Add damage handlers to the character's skeleton (eg, limbs, head and torso)
         //   a - Create a new child object of the relevant bone and set it to the CharacterPhysics layer
         //   b - Add a collider that is roughly the shape required
         //   c - Add a NeoFpsEmeraldAI_DamageHandler component and set it up with the desired values (note that the Emerald demo characters have 10 health, so a multiplier of less than 1 is used in most cases)
