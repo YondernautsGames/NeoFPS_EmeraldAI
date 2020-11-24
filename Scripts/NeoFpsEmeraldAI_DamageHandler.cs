@@ -85,6 +85,10 @@ namespace NeoFPS.EmeraldAI
                     source.controller.isPlayer ? EmeraldAISystem.TargetType.Player : EmeraldAISystem.TargetType.AI,
                     source.controller.currentCharacter.transform
                     );
+					
+                // Report damage dealt
+                if (damage > 0f && source != null && source.controller != null)
+                    source.controller.currentCharacter.ReportTargetHit(m_Critical);
 
                 return m_Critical ? DamageResult.Critical : DamageResult.Standard;
             }
