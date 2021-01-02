@@ -2,11 +2,11 @@
 NeoFPS and Emerald AI 2 integration assets
 
 ## Requirements
-This repository was created using Unity 2018.1
+This repository was created using Unity 2018.4
 
 It requires the assets [NeoFPS](https://assetstore.unity.com/packages/templates/systems/neofps-150179?aid=1011l58Ft) and [Emerald AI](https://assetstore.unity.com/packages/tools/ai/emerald-ai-2-0-40199?aid=1011l58Ft).
 
-Last updated with version 1.0.04 of NeoFPS and 2.3.0.1 of Emerald AI
+Last updated with version 1.1.08 of NeoFPS and 2.3.0.1 of Emerald AI.
 
 ## Installation
 This integration example is intended to be dropped in to a fresh project along with NeoFPS and Emerald AI.
@@ -20,17 +20,19 @@ This integration example is intended to be dropped in to a fresh project along w
 4. Remove the **EmeraldAIPlayerDamage.cs** script located in **Emerald AI/Scripts/Components** to fix the duplicate script error (you want to use the NeoFPS script)
 	
 ## Integration
+This integration only requires that you modify the AI characters, and replace the player damage script as mentioned above to work. The NeoFPS characters and weapons do not need any modifications to work once the AI have been correctly set up.
+
 The following are the important assets in this repo that enable NeoFPS and Emerald AI to work side by side.
 
 #### MonoBehaviours
-There is a new custom **EmeraldAIPlayerDamage.cs** in **NeoFPS_EmeraldAI/Scripts** which replaces the one in **Emerald AI/Scripts/Player**. This is a simple behaviour that Emerald AI characters add to any targets they attack in order to communicate AI to player damage. This script applies player damage as well as providing information about the damage source to the NeoFPS character, and triggering hit effects such as camera knock.
+There is a new custom **EmeraldAIPlayerDamage.cs** in **NeoFPS_EmeraldAI/Scripts** which replaces the one in **Emerald AI/Scripts/Player**. This is a simple behaviour that Emerald AI characters add to any targets they attack in order to communicate AI to player damage. This script applies player damage as well as providing information about the damage source to the NeoFPS character, and triggering hit effects such as camera knock. You can add this to the NeoFPS player character if you want, but it will be added automatically when you are first attacked if not.
 
 The script **NeoFpsEmeraldAI_DamageHandler.cs** located in **NeoFPS_EmeraldAI/Scripts** is a NeoFPS damage handler which passes damage to the Emerald AI character as well as letting the character know the damage source. This must be added to all Emerald AI characters so the player can damage them.
 
 The script **NeoFpsEmeraldAI_AsyncLoadFixer.cs** is required for Emerald AI to work with async scene loading. This should be present in every scene and the easiest way is by adding it to any Emerald AI characters.
 
 #### Demo Scene
-The demo scene is a modified version of Emerald AI's **Playable Demo** scene. The character prefabs have been replaced with new ones as described below, and the player character has been replaced by a NeoFPS test setup spawner which spawns the standard NeoFPS demo character.
+The demo scene is a modified version of Emerald AI's **Playable Demo** scene. The character prefabs have been replaced with new ones as described below, and the Emerald AI demo player character has been replaced by a NeoFPS spawner which spawns the standard NeoFPS demo character.
 
 #### Prefabs
 The three character prefabs from the original Emerald AI **Playable Demo** have been replaced with duplicates set up to work with NeoFPS. For reference (this does not need repeating for the demo), this involved the following changes:
@@ -59,7 +61,7 @@ NeoFPS uses a loading screen within its own dedicated scene, and then async load
 ```
 SceneManager.MoveGameObjectToScene(newGameObject, instantiatingBehaviour.gameObject.scene);
 ```
-The provided NeoFpsEmeraldAI_AsyncLoadFixer behaviour is a workaround which recreates the destroyed object with a 1 frame delay. It checks the object pool and combat text system and instantiates them if they are null.
+Emerald AI creates and initialises its object pooling system and combat text system from within the Awake() method of the AI. This means that when combined with NeoFPS' async scene loading, they will be instantiated in the wrong scene and then destroyed. The provided NeoFpsEmeraldAI_AsyncLoadFixer behaviour is a workaround for this problem, which checks the object pool and combat text system after a 1 frame delay and re-instantiates them if they are null.
 
 ## Future Work
 This integration will be updated along with any major updates to Emerald AI, and when new features are added to NeoFPS. For example, the damage handlers will be altered to enable blocking when the additional NeoFPS melee features are added.
