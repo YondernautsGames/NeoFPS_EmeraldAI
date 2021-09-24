@@ -14,14 +14,13 @@
  * limitations under the License.
  */
 
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using EmeraldAI.Example;
+using NeoFPS;
 
 namespace EmeraldAI
 {
-    public class EmeraldAIPlayerDamage : MonoBehaviour, NeoFPS.IDamageSource
+    public class EmeraldAIPlayerDamage : MonoBehaviour, IDamageSource
     {
         public List<string> ActiveEffects = new List<string>();
 
@@ -29,15 +28,29 @@ namespace EmeraldAI
         const float k_KickRotation = 5f;
         const float k_KickDuration = 0.5f;
 
-        private EmeraldAISystem m_AI;
+        private EmeraldAISystem m_AI = null;
+        private IHealthManager m_HealthManager = null;
+        private AdditiveKicker m_HeadKicker = null;
+        private bool m_Initialised = false;
 
-        public NeoFPS.DamageFilter outDamageFilter
+        public bool IsDead
         {
-            get { return NeoFPS.DamageFilter.AllDamageAllTeams; }
+            get
+            {
+                if (m_HealthManager != null)
+                    return !m_HealthManager.isAlive;
+                else
+                    return true;
+            }
+        }
+
+        public DamageFilter outDamageFilter
+        {
+            get { return DamageFilter.AllDamageAllTeams; }
             set { }
         }
 
-        public NeoFPS.IController controller
+        public IController controller
         {
             get { return null; }
         }
@@ -52,40 +65,48 @@ namespace EmeraldAI
             get { return m_AI.AIName; }
         }
 
-        public void SendPlayerDamage(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent, bool CriticalHit = false)
+        void Awake()
         {
-            DamageNeoFpsPlayer(DamageAmount, Target, EmeraldComponent, CriticalHit);
-
-            //Creates damage text on the player's position, if enabled.
-            //CombatTextSystem.Instance.CreateCombatText(DamageAmount, transform.position, CriticalHit, false, true);
+            if (!m_Initialised)
+                Initialise();
         }
 
-        void DamageNeoFpsPlayer(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent, bool critical)
+        void Initialise()
         {
             // Damage the player health
-            var health = GetComponent<NeoFPS.IHealthManager>();
-            if (health == null)
-                return;
-
-            m_AI = EmeraldComponent;
-            health.AddDamage(DamageAmount, critical, this);
+            m_HealthManager = GetComponent<IHealthManager>();
 
             // Get character head kicker
-            var character = GetComponent<NeoFPS.ICharacter>();
-            if (character == null)
-                return;
-            var kicker = character.headTransformHandler.GetComponent<NeoFPS.AdditiveKicker>();
-            if (kicker == null)
-                return;
+            var character = GetComponent<ICharacter>();
+            if (character != null)
+                m_HeadKicker = character.headTransformHandler.GetComponent<AdditiveKicker>();
 
-            // Get direction of attack
-            var direction = transform.position - EmeraldComponent.transform.position;
-            direction.y = 0;
-            direction.Normalize();
+            m_Initialised = true;
+        }
+
+        public void SendPlayerDamage(int DamageAmount, Transform Target, EmeraldAISystem EmeraldComponent, bool CriticalHit = false)
+        {
+            if (!m_Initialised)
+                Initialise();
+
+            // Store the AI
+            m_AI = EmeraldComponent;
+
+            // Apply damage
+            if (m_HealthManager != null)
+                m_HealthManager.AddDamage(DamageAmount, CriticalHit, this);
 
             // Kick the camera position & rotation
-            kicker.KickPosition(direction * k_KickDistance, k_KickDuration);
-            kicker.KickRotation(Quaternion.AngleAxis(k_KickRotation, Vector3.Cross(direction, Vector3.up)), k_KickDuration);
+            if (m_HeadKicker != null)
+            {
+                // Get direction of attack
+                var direction = transform.position - EmeraldComponent.transform.position;
+                direction.y = 0;
+                direction.Normalize();
+
+                m_HeadKicker.KickPosition(direction * k_KickDistance, k_KickDuration);
+                m_HeadKicker.KickRotation(Quaternion.AngleAxis(k_KickRotation, Vector3.Cross(direction, Vector3.up)), k_KickDuration);
+            }
         }
     }
 }

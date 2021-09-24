@@ -37,9 +37,19 @@ namespace NeoFPS.EmeraldAI
         }
 #endif
 
+        protected bool isCritical
+        {
+            get { return m_Critical; }
+        }
+
         void Awake()
         {
             m_EmeraldAISystem = GetComponentInParent<EmeraldAISystem>();
+        }
+
+        protected virtual void OnPlayerKilledAI()
+        {
+            //Debug.Log("AI was killed by player");
         }
 
         #region IDamageHandler implementation
@@ -69,6 +79,8 @@ namespace NeoFPS.EmeraldAI
 
         public DamageResult AddDamage(float damage, IDamageSource source)
         {
+            bool isDead = m_EmeraldAISystem.IsDead;
+
             if (source == null || source.controller == null)
                 return AddDamage(damage);
 
@@ -89,6 +101,10 @@ namespace NeoFPS.EmeraldAI
                 // Report damage dealt
                 if (damage > 0f && source != null && source.controller != null)
                     source.controller.currentCharacter.ReportTargetHit(m_Critical);
+
+                // Report killed
+                if (!isDead && m_EmeraldAISystem.IsDead && source.controller.isPlayer)
+                    OnPlayerKilledAI();
 
                 return m_Critical ? DamageResult.Critical : DamageResult.Standard;
             }
