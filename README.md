@@ -51,7 +51,7 @@ The three character prefabs from the original Emerald AI **Playable Demo** have 
 ## Issues
 
 #### Location Based Damage
-Emerald AI characters are hard coded to disable all colliders in their character heirarchy on initialisation in order to prevent attached ragdolls causing issues. Unfortunately this means that, without modifications, the Emerald AI characters cannot have location specific damage handlers such as head or eye crits and less vulnerable armoured sections. The code that performs this can be found in the file **EmeraldAIInitializer.cs** in the method `DisableRagdoll()`.
+Emerald AI characters are hard coded to disable all colliders in their character heirarchy on initialisation in order to prevent attached ragdolls causing issues. Unfortunately this means that, without modifications, the Emerald AI characters cannot have location specific damage handlers such as head or eye crits and less vulnerable armoured sections. The **NeoFpsEmeraldAI_InitializerOverride.cs** script in the integration directory can be used to add the location based damage and contains step-by-step instructions on the modifications require. Follow the instructions and uncomment the code in this file and you will be able to add individual colliders and damage handlers to your AI character limbs.
 
 #### Save Games Not Currently Implemented
 The NeoFPS save games system has not yet been integrated with Emerald AI. We're looking at how to achieve this, but it will require work from both sides.
