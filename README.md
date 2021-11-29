@@ -1,12 +1,12 @@
 # NeoFPS_EmeraldAI
-NeoFPS and Emerald AI 2 integration assets
+NeoFPS and Emerald AI 3 integration assets
 
 ## Requirements
 This repository was created using Unity 2018.4
 
 It requires the assets [NeoFPS](https://assetstore.unity.com/packages/templates/systems/neofps-150179?aid=1011l58Ft) and [Emerald AI](https://assetstore.unity.com/packages/tools/ai/emerald-ai-2-0-40199?aid=1011l58Ft).
 
-Last updated with version 1.1.08 of NeoFPS and 2.3.0.1 of Emerald AI.
+Last updated with version 1.1.08 of NeoFPS and 3.1 of Emerald AI.
 
 ## Installation
 This integration example is intended to be dropped in to a fresh project along with NeoFPS and Emerald AI.
@@ -48,10 +48,14 @@ The three character prefabs from the original Emerald AI **Playable Demo** have 
 - Added **NeoFpsEmeraldAI_AsyncLoadFixer** behaviour to the root object
 - Added **SimpleSurface** behaviour to the root object with the relevant surface type
 
-## Issues
+If you want your AI to have limb / location based damage then you will also need to do the following:
+- Add a ragdoll to the AI character as per the Emerald AI docs
+- Add the NeoFpsEmeraldAI_DamageHandler component to each limb collider
+- Add a **LocationBasedDamage** component to the root of the character
+- Add each of the colliders to the list of location damage colliders in that **LocationBasedDamage** component
+- Set the layer for each of the ragdoll colliders to **CharacterRagdoll**
 
-#### Location Based Damage
-Emerald AI characters are hard coded to disable all colliders in their character heirarchy on initialisation in order to prevent attached ragdolls causing issues. Unfortunately this means that, without modifications, the Emerald AI characters cannot have location specific damage handlers such as head or eye crits and less vulnerable armoured sections. The **NeoFpsEmeraldAI_InitializerOverride.cs** script in the integration directory can be used to add the location based damage and contains step-by-step instructions on the modifications require. Follow the instructions and uncomment the code in this file and you will be able to add individual colliders and damage handlers to your AI character limbs.
+## Issues
 
 #### Save Games Not Currently Implemented
 The NeoFPS save games system has not yet been integrated with Emerald AI. We're looking at how to achieve this, but it will require work from both sides.

@@ -74,7 +74,7 @@ namespace EmeraldAI
         void Initialise()
         {
             // Damage the player health
-            m_HealthManager = GetComponent<IHealthManager>();
+            m_HealthManager = GetComponentInParent<IHealthManager>();
 
             // Get character head kicker
             var character = GetComponent<ICharacter>();

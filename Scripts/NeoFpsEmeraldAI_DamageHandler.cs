@@ -19,7 +19,7 @@ using UnityEngine;
 
 namespace NeoFPS.EmeraldAI
 {
-    public class NeoFpsEmeraldAI_DamageHandler : MonoBehaviour, IDamageHandler
+    public class NeoFpsEmeraldAI_DamageHandler : MonoBehaviour, IDamageHandler, IImpactHandler
     {
         [SerializeField, Tooltip("The value to multiply any incoming damage by. Use to reduce damage to areas like feet, or raise it for areas like the head.")]
         private float m_Multiplier = 0.1f;
@@ -81,7 +81,7 @@ namespace NeoFPS.EmeraldAI
         {
             bool isDead = m_EmeraldAISystem.IsDead;
 
-            if (source == null || source.controller == null)
+            if (source == null)
                 return AddDamage(damage);
 
             // Apply damage
@@ -92,19 +92,32 @@ namespace NeoFPS.EmeraldAI
                 if (CombatTextSystem.Instance != null)
                     CombatTextSystem.Instance.CreateCombatTextAI(scaledDamage, transform.position, m_Critical, false);
 
-                m_EmeraldAISystem.Damage(
-                    scaledDamage,
-                    source.controller.isPlayer ? EmeraldAISystem.TargetType.Player : EmeraldAISystem.TargetType.AI,
-                    source.controller.currentCharacter.transform
-                    );
-					
-                // Report damage dealt
-                if (damage > 0f && source != null && source.controller != null)
-                    source.controller.currentCharacter.ReportTargetHit(m_Critical);
+                if (source.controller != null)
+                {
+                    // Apply damage
+                    m_EmeraldAISystem.Damage(
+                        scaledDamage,
+                        EmeraldAISystem.TargetType.Player,
+                        source.damageSourceTransform
+                        );
 
-                // Report killed
-                if (!isDead && m_EmeraldAISystem.IsDead && source.controller.isPlayer)
-                    OnPlayerKilledAI();
+                    // Report damage dealt
+                    if (damage > 0f && source != null && source.controller != null)
+                        source.controller.currentCharacter.ReportTargetHit(m_Critical);
+
+                    // Report killed
+                    if (!isDead && m_EmeraldAISystem.IsDead && source.controller.isPlayer)
+                        OnPlayerKilledAI();
+                }
+                else
+                {
+                    // Apply damage
+                    m_EmeraldAISystem.Damage(
+                        scaledDamage,
+                        EmeraldAISystem.TargetType.NonAITarget,
+                        source.damageSourceTransform
+                        );
+                }
 
                 return m_Critical ? DamageResult.Critical : DamageResult.Standard;
             }
@@ -120,6 +133,12 @@ namespace NeoFPS.EmeraldAI
         public DamageResult AddDamage(float damage, RaycastHit hit, IDamageSource source)
         {
             return AddDamage(damage, source);
+        }
+
+        public void HandlePointImpact(Vector3 position, Vector3 force)
+        {
+            if (m_EmeraldAISystem.IsDead)
+                m_EmeraldAISystem.ReceivedRagdollForceAmount = (int)(force.magnitude * 10f);
         }
 
         #endregion
