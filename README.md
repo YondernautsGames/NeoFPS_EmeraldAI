@@ -15,10 +15,18 @@ This integration example is intended to be dropped in to a fresh project along w
 
 2. Import the Emerald AI asset.
 
-3. Clone this repository to a folder inside the project Assets folder such as "NeoFPS_EmeraldAI"
+3. Import this package into your project (see next section for details)
 
 4. Remove the **EmeraldAIPlayerDamage.cs** script located in **Emerald AI/Scripts/Components** to fix the duplicate script error (you want to use the NeoFPS script)
 	
+### Importing the package
+
+Depending on how you prefer to work there are three ways to import this package:
+
+- Clone this repository to a folder inside the project Assets folder such as "NeoFPS_EmeraldAI" (the old and trusted way)
+- Use the package manger to import from Git by poinging it at this repository in GitHub
+- Clone this repository to whereever you prefer on your computer and "import from disk" in the Package Manager (allows you to edit files locally)
+
 ## Integration
 This integration only requires that you modify the AI characters, and replace the player damage script as mentioned above to work. The NeoFPS characters and weapons do not need any modifications to work once the AI have been correctly set up.
 

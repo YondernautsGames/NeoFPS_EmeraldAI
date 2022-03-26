@@ -1,0 +1,9 @@
+{
+	"name":"com.yondernaughtgames.neofpsmeraldai",
+	"displayName":"Yondernaught Games - Neo FPS Emerald AI Integration",
+	"version":"0.1.0",
+	"unity":"2019.4",
+	"description":"Use Emerald AI for your enemies in Neo FPS.",
+	"keywords":["Character", "AI"],
+	"category":"Scripts"
+}
