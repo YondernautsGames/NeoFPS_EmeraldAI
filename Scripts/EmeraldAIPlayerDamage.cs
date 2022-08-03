@@ -29,6 +29,7 @@ namespace EmeraldAI
         const float k_KickDuration = 0.5f;
 
         private EmeraldAISystem m_AI = null;
+        private IDamageHandler m_DamageHandler = null;
         private IHealthManager m_HealthManager = null;
         private AdditiveKicker m_HeadKicker = null;
         private bool m_Initialised = false;
@@ -73,7 +74,8 @@ namespace EmeraldAI
 
         void Initialise()
         {
-            // Damage the player health
+            // Get health and damage handlers
+			m_DamageHandler = GetComponent<IDamageHandler>();
             m_HealthManager = GetComponentInParent<IHealthManager>();
 
             // Get character head kicker
@@ -88,13 +90,20 @@ namespace EmeraldAI
         {
             if (!m_Initialised)
                 Initialise();
+			
+			Debug.Log (string.Format("Emerald AI damage player. health: {0}, damage: {1}", m_HealthManager != null, m_DamageHandler != null));
 
             // Store the AI
             m_AI = EmeraldComponent;
 
             // Apply damage
-            if (m_HealthManager != null)
-                m_HealthManager.AddDamage(DamageAmount, CriticalHit, this);
+			if (m_DamageHandler != null)
+				m_DamageHandler.AddDamage(DamageAmount, this);
+			else
+			{
+				if (m_HealthManager != null)
+					m_HealthManager.AddDamage(DamageAmount, CriticalHit, this);
+			}
 
             // Kick the camera position & rotation
             if (m_HeadKicker != null)

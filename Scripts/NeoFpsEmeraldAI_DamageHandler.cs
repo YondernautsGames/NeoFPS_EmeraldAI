@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+using System;
 using EmeraldAI;
 using UnityEngine;
 
@@ -28,6 +29,11 @@ namespace NeoFPS.EmeraldAI
         private bool m_Critical = false;
 
         private EmeraldAISystem m_EmeraldAISystem;
+		
+		public IHealthManager healthManager
+		{
+			get { return null; }
+		}
 
 #if UNITY_EDITOR
         void OnValidate()
@@ -69,7 +75,14 @@ namespace NeoFPS.EmeraldAI
                 if (CombatTextSystem.Instance != null)
                     CombatTextSystem.Instance.CreateCombatTextAI(scaledDamage, transform.position, m_Critical, false);
 
-                m_EmeraldAISystem.Damage(scaledDamage);
+				try
+				{
+					m_EmeraldAISystem.Damage(scaledDamage);
+				}
+				catch (Exception e)
+				{
+					Debug.LogError("Emerald AI threw an exception: " + e.Message);
+				}
 
                 return m_Critical ? DamageResult.Critical : DamageResult.Standard;
             }
@@ -94,12 +107,19 @@ namespace NeoFPS.EmeraldAI
 
                 if (source.controller != null)
                 {
-                    // Apply damage
-                    m_EmeraldAISystem.Damage(
-                        scaledDamage,
-                        EmeraldAISystem.TargetType.Player,
-                        source.damageSourceTransform
-                        );
+					try
+					{
+						// Apply damage
+						m_EmeraldAISystem.Damage(
+							scaledDamage,
+							EmeraldAISystem.TargetType.Player,
+							source.damageSourceTransform
+							);
+					}
+					catch (Exception e)
+					{
+						Debug.LogError("Emerald AI threw an exception: " + e.Message);
+					}
 
                     // Report damage dealt
                     if (damage > 0f && source != null && source.controller != null)
@@ -110,13 +130,20 @@ namespace NeoFPS.EmeraldAI
                         OnPlayerKilledAI();
                 }
                 else
-                {
+                {						
+					try
+					{
                     // Apply damage
                     m_EmeraldAISystem.Damage(
                         scaledDamage,
                         EmeraldAISystem.TargetType.NonAITarget,
                         source.damageSourceTransform
                         );
+					}
+					catch (Exception e)
+					{
+						Debug.LogError("Emerald AI threw an exception: " + e.Message);
+					}
                 }
 
                 return m_Critical ? DamageResult.Critical : DamageResult.Standard;
