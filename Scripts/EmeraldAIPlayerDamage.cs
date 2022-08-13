@@ -91,8 +91,6 @@ namespace EmeraldAI
             if (!m_Initialised)
                 Initialise();
 			
-			Debug.Log (string.Format("Emerald AI damage player. health: {0}, damage: {1}", m_HealthManager != null, m_DamageHandler != null));
-
             // Store the AI
             m_AI = EmeraldComponent;
 
