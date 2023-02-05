@@ -37,6 +37,11 @@ namespace NeoFPS.EmeraldAI
         }
 #endif
 
+	public IHealthManager healthManager
+	{
+		get { return null; }
+	}
+		
         protected bool isCritical
         {
             get { return m_Critical; }
