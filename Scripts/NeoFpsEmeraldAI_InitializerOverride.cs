@@ -65,7 +65,6 @@ namespace NeoFPS.EmeraldAI
                 EmeraldComponent.EmeraldEventsManagerComponent.CreateDroppableWeapon();
             }
         }
-        */
 
         // This class is a workaround to enable location based damage (eg headshots) to Emerald AI characters.
         // Using this class requires modifying the Emerald AI source code, so it is sensitive to changes in the API.
@@ -81,5 +80,6 @@ namespace NeoFPS.EmeraldAI
         //   a - Create a new child object of the relevant bone and set it to the CharacterPhysics layer
         //   b - Add a collider that is roughly the shape required
         //   c - Add a NeoFpsEmeraldAI_DamageHandler component and set it up with the desired values (note that the Emerald demo characters have 10 health, so a multiplier of less than 1 is used in most cases)
+        */
     }
 }

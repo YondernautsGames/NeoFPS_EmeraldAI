@@ -231,6 +231,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NeoFpsEmeraldAI_ChomperMelee
       objectReference: {fileID: 0}
+    - target: {fileID: 1033616264083277236, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1033616264083277237, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -455,6 +460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NeoFpsEmeraldAI_ChomperMelee (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033616264083277236, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033616264083277237, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
         type: 3}
@@ -864,6 +874,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &372728297
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083631, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411316709054083674, guid: 63e22910825cbfa4a90265bff9d572bb,
+        type: 3}
+      propertyPath: m_Name
+      value: NeoFpsEmeraldAI_EllenLimbDamage
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63e22910825cbfa4a90265bff9d572bb, type: 3}
 --- !u!136 &379736258 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 1033616264083276807, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
@@ -995,6 +1074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NeoFpsEmeraldAI_ChomperMelee (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033616264083277236, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033616264083277237, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
         type: 3}
@@ -1311,6 +1395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NeoFpsEmeraldAI_ChomperMelee (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1033616264083277236, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1033616264083277237, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -1529,6 +1618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NeoFpsEmeraldAI_ChomperMelee (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033616264083277236, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033616264083277237, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
         type: 3}
@@ -2994,6 +3088,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NeoFpsEmeraldAI_ChomperMelee (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033616264083277236, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1033616264083277237, guid: b7c6ff9410c4a7b42b61f4c4bc9d5a5c,
         type: 3}

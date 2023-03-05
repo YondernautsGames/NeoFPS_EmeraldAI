@@ -2626,7 +2626,7 @@ GameObject:
   - component: {fileID: 1033616264083277193}
   - component: {fileID: 1033616264083277239}
   - component: {fileID: 225398398077869613}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: NeoFpsEmeraldAI_ChomperMelee
   m_TagString: Respawn
   m_Icon: {fileID: 0}
@@ -2663,6 +2663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ForceWalkDistance: 2.5
   LockTurning: 0
+  MovementTurningSensitivity: 2
   NotifiedOfNewVersion: 1
   ReachedDestination: 0
   SwitchWeaponType: 1
@@ -2854,9 +2855,10 @@ MonoBehaviour:
   NonCombatAngleToTurn: 20
   CombatAngleToTurn: 20
   StationaryTurningSpeedNonCombat: 100
-  MovingTurningSpeedNonCombat: 2000
+  MovingTurnSpeedNonCombat: 2.5
   StationaryTurningSpeedCombat: 100
-  MovingTurningSpeedCombat: 2000
+  MovingTurnSpeedCombat: 2.5
+  CurrentMovingTurnSpeed: 2.5
   BackupTurningSpeed: 100
   MaxSlopeLimit: 30
   Acceleration: 1
@@ -3125,7 +3127,7 @@ MonoBehaviour:
   CurrentDamageAmount: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 1
+  TabNumber: 3
   TemperamentTabNumber: 2
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 0
@@ -3273,6 +3275,7 @@ MonoBehaviour:
   RangedCombatHit6AnimationSpeed: 1
   StartingBehaviorRef: 0
   StartingConfidenceRef: 0
+  StartingWanderingTypeRef: 0
   SingleDestination: {x: 0, y: 0, z: 0}
   Renderer1: {fileID: 0}
   Renderer2: {fileID: 0}
@@ -3330,13 +3333,13 @@ MonoBehaviour:
   UseCustomFontAIName: 0
   UseCustomFontAILevel: 0
   AlignAIWithGroundRef: 0
-  CreateHealthBarsRef: 0
+  CreateHealthBarsRef: 1
   UseNonAITagRef: 0
   UseMagicEffectsPackRef: 0
   RandomizeDamageRef: 1
   CustomizeHealthBarRef: 0
   UseCustomFontRef: 0
-  DisplayAINameRef: 0
+  DisplayAINameRef: 1
   DisplayAITitleRef: 0
   DisplayAILevelRef: 0
   HasMultipleLODsRef: 0
@@ -3446,6 +3449,7 @@ MonoBehaviour:
   StartingTag: 
   StartingLayer: 0
   m_AnimationProfile: {fileID: 0}
+  m_WaypointObject: {fileID: 0}
   FinalImpactSound: 0
   NonCombatAILayerIndex: 2
   DetectionLayerMask:
@@ -3456,7 +3460,7 @@ MonoBehaviour:
     m_Bits: 0
   UILayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 67117057
   AlignmentLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -3639,6 +3643,7 @@ MonoBehaviour:
   PlayerDetection: 1
   PlayerDetectionCooldown: 0
   DetectionTimer: 0
+  CurrentTargetCollider: {fileID: 0}
 --- !u!114 &1033616264083277195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3757,6 +3762,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3769,6 +3775,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

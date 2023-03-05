@@ -32,9 +32,10 @@ namespace NeoFPS.EmeraldAI
 
             // Emerald AI creates a number of objects from within Awake() functions.
             // When using async load, this will create objects in the active scene.
-            // NeoFPS uses async load behind a loading screen, which means the new objects are created in the loading screen scene, not the AI's scene
-            // This can be fixed by setting the new objects' scene on creation to gameObject.scene
-            // This behaviour recreates the objects that are destroyed when the loading scene unloads
+            // NeoFPS uses async load behind a loading screen that is stored in a separate scene
+            // This means that any new global objects that Emerald AI creates in Awake() in the loading screen scene, not the main game / AI scene
+            // When the loading screen is unloaded, the global objects (eg object pool and combat text system) are destroyed
+            // This behaviour recreates those objects on start instead, if they do not currently exist
 
             // Create object pool if destroyed
             if (EmeraldAISystem.ObjectPool == null)
