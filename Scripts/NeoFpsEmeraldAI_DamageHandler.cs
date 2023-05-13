@@ -60,10 +60,11 @@ namespace NeoFPS.EmeraldAI
 
         #region IDamageHandler implementation
 
+		private DamageFilter m_InDamageFilter = DamageFilter.AllDamageAllTeams;
         public DamageFilter inDamageFilter
         {
-            get { return DamageFilter.AllDamageAllTeams; ; }
-            set { }
+            get { return m_InDamageFilter; }
+            set { m_InDamageFilter = value; }
         }
 
         public DamageResult AddDamage(float damage)
