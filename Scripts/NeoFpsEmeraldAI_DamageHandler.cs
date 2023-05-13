@@ -98,7 +98,7 @@ namespace NeoFPS.EmeraldAI
                 return AddDamage(damage);
 
             // Apply damage
-            if (m_Multiplier > 0f)
+            if (m_Multiplier > 0f && inDamageFilter.CollidesWith(source.outDamageFilter, false))
             {
                 int scaledDamage = Mathf.CeilToInt(damage * m_Multiplier);
 
