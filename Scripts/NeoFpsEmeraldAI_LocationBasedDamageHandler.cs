@@ -51,10 +51,11 @@ namespace NeoFPS.EmeraldAI
 
         #region IDamageHandler implementation
 
+		private DamageFilter m_InDamageFilter = DamageFilter.AllDamageAllTeams;
         public DamageFilter inDamageFilter
         {
-            get { return DamageFilter.AllDamageAllTeams; ; }
-            set { }
+            get { return m_InDamageFilter; }
+            set { m_InDamageFilter = value; }
         }
 
         public DamageResult AddDamage(float damage)
@@ -77,26 +78,31 @@ namespace NeoFPS.EmeraldAI
                 return AddDamage(damage);
 
             // Apply damage
-            int scaledDamage = Mathf.CeilToInt(damage * m_Multiplier);
+			if (inDamageFilter.CollidesWith(source.outDamageFilter, false))
+			{
+				int scaledDamage = Mathf.CeilToInt(damage * m_Multiplier);
 
-            if (CombatTextSystem.Instance != null)
-                CombatTextSystem.Instance.CreateCombatTextAI(scaledDamage, transform.position, m_Critical, false);
+				if (CombatTextSystem.Instance != null)
+					CombatTextSystem.Instance.CreateCombatTextAI(scaledDamage, transform.position, m_Critical, false);
 
-            m_LocationBasedDamage.DamageArea(
-                scaledDamage,
-                source.controller.isPlayer ? EmeraldAISystem.TargetType.Player : EmeraldAISystem.TargetType.AI,
-                source.controller.currentCharacter.transform
-                );
-					
-            // Report damage dealt
-            if (damage > 0f && source != null && source.controller != null)
-                source.controller.currentCharacter.ReportTargetHit(m_Critical);
+				m_LocationBasedDamage.DamageArea(
+					scaledDamage,
+					source.controller.isPlayer ? EmeraldAISystem.TargetType.Player : EmeraldAISystem.TargetType.AI,
+					source.controller.currentCharacter.transform
+					);
+						
+				// Report damage dealt
+				if (damage > 0f && source != null && source.controller != null)
+					source.controller.currentCharacter.ReportTargetHit(m_Critical);
 
-            // Report killed
-            if (!isDead && m_LocationBasedDamage.EmeraldComponent.IsDead && source.controller.isPlayer)
-                OnPlayerKilledAI();
+				// Report killed
+				if (!isDead && m_LocationBasedDamage.EmeraldComponent.IsDead && source.controller.isPlayer)
+					OnPlayerKilledAI();
 
-            return m_Critical ? DamageResult.Critical : DamageResult.Standard;
+				return m_Critical ? DamageResult.Critical : DamageResult.Standard;
+			}
+			else
+                return DamageResult.Ignored;
         }
 
         public DamageResult AddDamage(float damage, RaycastHit hit)
@@ -124,30 +130,35 @@ namespace NeoFPS.EmeraldAI
             bool isDead = m_LocationBasedDamage.EmeraldComponent.IsDead;
 
             if (source == null || source.controller == null)
-                return AddDamage(damage);
+                return AddLocationBasedDamage(damage, hit);
 
             // Apply damage
-            int scaledDamage = Mathf.CeilToInt(damage * m_Multiplier);
-            float multiplier = m_LocationBasedDamage.DamageMultiplier;
+			if (inDamageFilter.CollidesWith(source.outDamageFilter, false))
+			{
+				int scaledDamage = Mathf.CeilToInt(damage * m_Multiplier);
+				float multiplier = m_LocationBasedDamage.DamageMultiplier;
 
-            if (CombatTextSystem.Instance != null)
-                CombatTextSystem.Instance.CreateCombatTextAI( (int)(scaledDamage * multiplier), transform.position, m_Critical, false);
+				if (CombatTextSystem.Instance != null)
+					CombatTextSystem.Instance.CreateCombatTextAI( (int)(scaledDamage * multiplier), transform.position, m_Critical, false);
 
-            m_LocationBasedDamage.DamageArea(
-                scaledDamage,
-                source.controller.isPlayer ? EmeraldAISystem.TargetType.Player : EmeraldAISystem.TargetType.AI,
-                source.controller.currentCharacter.transform
-            );               
+				m_LocationBasedDamage.DamageArea(
+					scaledDamage,
+					source.controller.isPlayer ? EmeraldAISystem.TargetType.Player : EmeraldAISystem.TargetType.AI,
+					source.controller.currentCharacter.transform
+				);               
 
-            // Report damage dealt
-            if (damage > 0f && source != null && source.controller != null)
-                source.controller.currentCharacter.ReportTargetHit(m_Critical);
+				// Report damage dealt
+				if (damage > 0f && source != null && source.controller != null)
+					source.controller.currentCharacter.ReportTargetHit(m_Critical);
 
-            // Report killed
-            if (!isDead && m_LocationBasedDamage.EmeraldComponent.IsDead && source.controller.isPlayer)
-                OnPlayerKilledAI();
+				// Report killed
+				if (!isDead && m_LocationBasedDamage.EmeraldComponent.IsDead && source.controller.isPlayer)
+					OnPlayerKilledAI();
 
-            return m_Critical ? DamageResult.Critical : DamageResult.Standard;
+				return m_Critical ? DamageResult.Critical : DamageResult.Standard;
+			}
+			else
+                return DamageResult.Ignored;
         }
 
         // UHG handle LocationBasedDamage

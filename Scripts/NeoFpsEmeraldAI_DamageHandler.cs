@@ -114,7 +114,7 @@ namespace NeoFPS.EmeraldAI
 						m_EmeraldAISystem.Damage(
 							scaledDamage,
 							EmeraldAISystem.TargetType.Player,
-							source.damageSourceTransform
+							(source.controller as Component).transform;
 							);
 					}
 					catch (Exception e)
