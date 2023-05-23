@@ -95,11 +95,11 @@ namespace EmeraldAI
             m_AI = EmeraldComponent;
 
             // Apply damage
-			if (m_DamageHandler != null)
-				m_DamageHandler.AddDamage(DamageAmount, this);
+			if (m_DamageHandler != null)// && m_DamageHandler.enabled) // TODO: uncomment after 1.1.26
+                m_DamageHandler.AddDamage(DamageAmount, this);
 			else
 			{
-				if (m_HealthManager != null)
+				if (m_HealthManager != null)// && m_HealthManager.enabled) // TODO: uncomment after 1.1.26
 					m_HealthManager.AddDamage(DamageAmount, CriticalHit, this);
 			}
 

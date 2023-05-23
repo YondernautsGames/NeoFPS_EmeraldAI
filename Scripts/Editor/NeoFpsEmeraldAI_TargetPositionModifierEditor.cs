@@ -19,7 +19,7 @@ using UnityEditor;
 
 namespace NeoFPS.EmeraldAI
 {
-    [CustomEditor(typeof(NeoFpsEmeraldAI_TargetPositionModifierEditor))]
+    [CustomEditor(typeof(NeoFpsEmeraldAI_TargetPositionModifier))]
     public class NeoFpsEmeraldAI_TargetPositionModifierEditor : Editor
     {
         public override void OnInspectorGUI()

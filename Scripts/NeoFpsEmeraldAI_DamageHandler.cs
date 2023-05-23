@@ -134,12 +134,12 @@ namespace NeoFPS.EmeraldAI
                 {						
 					try
 					{
-                    // Apply damage
-                    m_EmeraldAISystem.Damage(
-                        scaledDamage,
-                        EmeraldAISystem.TargetType.NonAITarget,
-                        source.damageSourceTransform
-                        );
+                        // Apply damage
+                        m_EmeraldAISystem.Damage(
+                            scaledDamage,
+                            EmeraldAISystem.TargetType.NonAITarget,
+                            source.damageSourceTransform
+                            );
 					}
 					catch (Exception e)
 					{
