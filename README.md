@@ -39,6 +39,12 @@ The script **NeoFpsEmeraldAI_AsyncLoadFixer.cs** is required for Emerald AI to w
 
 **NeoFpsEmeraldAI_InitializerOverride.cs** is a legacy script that made it possible to support location based damage before Emerald AI had its own system added. It is now preferred to use the `NeoFpsEmeraldAI_LocationBasedDamageHandler` as listed above.
 
+**NeoFpsEmeraldAI_FirearmAttractor.cs** is added to your NeoFPS firearms or muzzle attachments in order to leverage Emerald AI's `AttractModifier` and add audio cues to gunshots which alert AI characters.
+
+**NeoFpsEmeraldAI_FootstepAttractor.cs** is added to your NeoFPS character and pointed at its motion controller. It leverages Emerald AI's `AttractModifier` to add audio cues to gunshots which alert AI characters on each footstep. It can optionally ignore footsteps when crouching.
+
+**NeoFpsEmeraldAI_PooledExplosion.cs** is a modified version of the NeoFPS `PooledExplosion` which leverages Emerald AI's `AttractModifier` to add audio cues to explosions which alert AI characters.
+
 Lastly, **NeoFpsEmeraldAI_TargetPositionModifier.cs** is ties into the player character's character controller and tracks when it crouches or stands. It uses this to notify ranged AI and AI that look at the player how high to aim.
 
 #### Demo Scene
@@ -69,6 +75,15 @@ Otherwise, you can simply do the following:
 
 #### Player Character Setup
 The only change required on the player character is to add an **NeoFpsEmeraldAI_TargetPositionModifier** behaviour to the root. This will help them aim at your head / upper body when you stand or crouch.
+
+#### Emerald AI Sound Detection System
+The Emerald AI sound detection system relies on the behaviour `AttractModifier` which notifies any AI with a `SoundDetector` behaviour of audio cues they should investigate. Emerald AI offers some simple options for triggering these attractors out of the box, but it also allows you to manually call its attract methods from your own code. The NeoFPS integration takes advantage of this to add audio cues to footsteps, gunshots and explosions. You can use these behaviours in the following ways:
+
+- **NeoFpsEmeraldAI_FootstepAttractor** is added to your player character and pointed at its motion controller. It will call the `AttractModifier` script's `ActivateAttraction()` method for each footstep. You can also use a switch parameter on the player character's motion graph that is set while crouching in order to avoid attracting AI when crouching.
+
+- **NeoFpsEmeraldAI_FirearmAttractor** can either be added to your NeoFPS firearm or an attachment object with the firearm's muzzle effect behaviour attached. If a firearm is not specified then the behaviour will search for one in its parent hierarchy on start. When enabled, the behaviour will connect to the firearm's events and trigger the `AttractModifier` script's `ActivateAttraction()` method each time it fires.
+
+- **NeoFpsEmeraldAI_PooledExplosion** must replace the NeoFPS `PooledExplosion` behaviours on your explosion prefabs, along with an `AttractModifier`. When the explosion is triggered, it will call the `ActivateAttraction()`. In order to make replacing the `PooledExplosion` behaviours easier, it is possible to switch the Unity editor inspector to Debug mode via the options menu in the top right. You can then change the behaviour's **Script** property to point at the new **NeoFpsEmeraldAI_PooledExplosion.cs** script instead. Doing this will keep the settings from the original `PooledExplosion` and apply them to the new behaviour. Any references to the prefab will also be maintained instead of breaking when the `PooledExplosion` is removed.
 
 ## Issues
 

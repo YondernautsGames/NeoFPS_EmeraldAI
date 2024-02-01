@@ -22,7 +22,6 @@ namespace NeoFPS.EmeraldAI
 {
     public class NeoFpsEmeraldAI_InitializerOverride : EmeraldAIInitializer
     {
-        /*
         [SerializeField]
         private Collider[] m_RagdollColliders = { };
 
@@ -35,7 +34,8 @@ namespace NeoFPS.EmeraldAI
 
             foreach (Collider C in m_RagdollColliders)
             {
-                C.enabled = false;
+				if (C != null)
+					C.enabled = false;
             }
 
             GetComponent<BoxCollider>().enabled = true;
@@ -48,7 +48,7 @@ namespace NeoFPS.EmeraldAI
 
             foreach (Collider C in m_RagdollColliders)
             {
-                if (C.transform != this.transform)
+                if (C != null && C.transform != this.transform)
                 {
                     C.tag = EmeraldComponent.RagdollTag;
                     C.enabled = true;
@@ -80,6 +80,5 @@ namespace NeoFPS.EmeraldAI
         //   a - Create a new child object of the relevant bone and set it to the CharacterPhysics layer
         //   b - Add a collider that is roughly the shape required
         //   c - Add a NeoFpsEmeraldAI_DamageHandler component and set it up with the desired values (note that the Emerald demo characters have 10 health, so a multiplier of less than 1 is used in most cases)
-        */
     }
 }
