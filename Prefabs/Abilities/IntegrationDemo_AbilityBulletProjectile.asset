@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2eb82b63b7f2f40acf8a839c8076a1, type: 3}
+  m_Name: IntegrationDemo_AbilityBulletProjectile
+  m_EditorClassIdentifier: 
+  AbilityName: Bullet
+  AbilityDescription: Ability Description
+  AbilityIcon: {fileID: 2800000, guid: 225c0664134d17744b824ae6e345d539, type: 3}
+  InfoSettingsFoldout: 0
+  DerivedSettingsFoldout: 1
+  ModularSettingsFoldout: 0
+  HideSettingsFoldout: 0
+  CooldownSettings:
+    Enabled: 0
+    CooldownLength: 1
+  ChargeSettings:
+    Enabled: 0
+    ChargeEffect: {fileID: 0}
+    ChargeLength: 2
+    ChargeSoundsList: []
+  CreateSettings:
+    Enabled: 1
+    CreateEffect: {fileID: 0}
+    CreateEffectTimeout: 2
+    CreateSoundsList:
+    - {fileID: 8300000, guid: f1b3b57b20e421a468b24def0450b470, type: 3}
+  BulletProjectileSettings:
+    Enabled: 1
+    IgnoreLayers:
+      serializedVersion: 2
+      m_Bits: 124536118
+    BulletObject: {fileID: 7177706834658424427, guid: 72597e2e9bf7ed64a93f5db8aba80cbd,
+      type: 3}
+    TotalBullets: 1
+    TimeBetweenBullets: 0.2
+    FireSoundsList: []
+    MuzzleFlashEffect: {fileID: 8695401051225182231, guid: df78a39e89fd68c4a9faa6eebde98996,
+      type: 3}
+    MuzzleFlashEffectTimeoutSeconds: 2
+    DefaultImpactEffect: {fileID: 8695401051225182231, guid: a4f6d1adb9377ef48be2cceff9e95c68,
+      type: 3}
+    DefaultImpactSounds:
+    - {fileID: 8300000, guid: b064c73b1ce3e184e8a81c0597eb1958, type: 3}
+    BulletImpactData:
+    - SurfaceTag: Respawn
+      ImpactEffect: {fileID: 8695401051225182231, guid: fee5584221afed140bdc2db66ccf9629,
+        type: 3}
+      ImpactSounds:
+      - {fileID: 8300000, guid: e1d8e0db26d00c84e94ba0e5945a708e, type: 3}
+    - SurfaceTag: Finish
+      ImpactEffect: {fileID: 8695401051225182231, guid: fee5584221afed140bdc2db66ccf9629,
+        type: 3}
+      ImpactSounds:
+      - {fileID: 8300000, guid: e1d8e0db26d00c84e94ba0e5945a708e, type: 3}
+    - SurfaceTag: Player
+      ImpactEffect: {fileID: 8695401051225182231, guid: fee5584221afed140bdc2db66ccf9629,
+        type: 3}
+      ImpactSounds:
+      - {fileID: 8300000, guid: e1d8e0db26d00c84e94ba0e5945a708e, type: 3}
+  StunnedSettings:
+    Enabled: 0
+    OddsToStun: 50
+    StunLength: 3
+  DamageSettings:
+    Foldout: 1
+    Enabled: 1
+    UseCriticalHits: 0
+    UseDamageOverTime: 0
+    BaseDamageSettings:
+      UseRandomAmounts: 0
+      BaseAmount: 5
+      MinAmount: 5
+      MaxAmount: 10
+      RagdollForce: 25
+    CriticalHitSettings:
+      CriticalHitOdds: 6.25
+      CriticalHitMultiplier: 1.1
+      CriticalHitSounds: []
+    DamageOverTimeSettings:
+      DamageOverTimeEffect: {fileID: 0}
+      OverTimeEffectTimeOutSeconds: 1.5
+      TickRate: 1
+      DamagePerTick: 1
+      DamageOverTimeLength: 3
+      OverTimeSounds: []

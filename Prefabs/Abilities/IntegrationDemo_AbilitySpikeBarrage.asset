@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb8bef5ae6b3914587fb9a80434e6d9, type: 3}
+  m_Name: IntegrationDemo_AbilitySpikeBarrage
+  m_EditorClassIdentifier: 
+  AbilityName: Rock Spike Barrage
+  AbilityDescription: Ability Description
+  AbilityIcon: {fileID: 2800000, guid: 225c0664134d17744b824ae6e345d539, type: 3}
+  InfoSettingsFoldout: 1
+  DerivedSettingsFoldout: 1
+  ModularSettingsFoldout: 0
+  HideSettingsFoldout: 0
+  CooldownSettings:
+    Enabled: 0
+    CooldownLength: 1
+  ChargeSettings:
+    Enabled: 0
+    ChargeEffect: {fileID: 0}
+    ChargeLength: 1
+    ChargeSoundsList: []
+  CreateSettings:
+    Enabled: 0
+    CreateEffect: {fileID: 0}
+    CreateEffectTimeout: 2
+    CreateSoundsList: []
+  ProjectileSettings:
+    Enabled: 1
+    SpawnProjectileEffect: {fileID: 0}
+    SpawnProjectileTimeoutSeconds: 1.5
+    SpawnProjectileSoundsList:
+    - {fileID: 8300000, guid: b6a15c3505177de4e8e8b1e159e205dc, type: 3}
+    ProjectileEffect: {fileID: 6904698915816178563, guid: b98c8a7b3e1e1f94591d5612d1b5a35f,
+      type: 3}
+    ProjectileTimeoutSeconds: 6
+    TravelSound: {fileID: 0}
+    EffectsToDisable:
+    - Trail
+    LaunchProjectileEffect: {fileID: 0}
+    LaunchProjectileTimeoutSeconds: 2
+    LaunchProjectileDelay: 0.33
+    LaunchProjectileSoundsList:
+    - {fileID: 8300000, guid: 6e975d277c5a14d42ace12b59d53e997, type: 3}
+    ImpactEffect: {fileID: 0}
+    ImpactTimeoutSeconds: 6
+    ImpactSoundsList:
+    - {fileID: 8300000, guid: e1d8e0db26d00c84e94ba0e5945a708e, type: 3}
+    - {fileID: 8300000, guid: b064c73b1ce3e184e8a81c0597eb1958, type: 3}
+    - {fileID: 8300000, guid: 6e975d277c5a14d42ace12b59d53e997, type: 3}
+  HomingSettings:
+    Enabled: 0
+    HomingSeconds: 3
+    MinimumHomingDistance: 0
+    HomingSpeed: 2
+  AerialProjectileSettings:
+    Enabled: 1
+    AerialEffect: {fileID: 4694803240454653336, guid: f71d54aaf66c621468001053bd2db31d,
+      type: 3}
+    AerialEffectTimeoutSeconds: 6
+    SpawnSource: 1
+    AimSource: 1
+    HeightOffset: 6
+    LaunchAngle: 0
+    Radius: 4
+    ProjectileSpeed: 25
+    TotalProjectiles: 10
+    TimeBetweenProjectiles: 0.075
+    AttachToTarget: 1
+  TargetTypeSettings:
+    Enabled: 1
+    TargetType: 0
+  ColliderSettings:
+    Enabled: 1
+    CollidableLayers:
+      serializedVersion: 2
+      m_Bits: 67182593
+    ProjectileLayer: 0
+    CollisionTimeout: 10
+    ColliderRadius: 0.2
+    ZOffet: 1.5
+  StunnedSettings:
+    Enabled: 0
+    OddsToStun: 50
+    StunLength: 3
+  DamageSettings:
+    Foldout: 1
+    Enabled: 1
+    UseCriticalHits: 0
+    UseDamageOverTime: 0
+    BaseDamageSettings:
+      UseRandomAmounts: 0
+      BaseAmount: 1
+      MinAmount: 5
+      MaxAmount: 10
+      RagdollForce: 25
+    CriticalHitSettings:
+      CriticalHitOdds: 6.25
+      CriticalHitMultiplier: 1.1
+      CriticalHitSounds: []
+    DamageOverTimeSettings:
+      DamageOverTimeEffect: {fileID: 0}
+      OverTimeEffectTimeOutSeconds: 1.5
+      TickRate: 1
+      DamagePerTick: 1
+      DamageOverTimeLength: 3
+      OverTimeSounds: []

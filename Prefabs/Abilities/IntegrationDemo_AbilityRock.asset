@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7682495e72a315f48a60632a06d502ec, type: 3}
+  m_Name: IntegrationDemo_AbilityRock
+  m_EditorClassIdentifier: 
+  AbilityName: Rock Ground Projectiles
+  AbilityDescription: Ability Description
+  AbilityIcon: {fileID: 2800000, guid: 225c0664134d17744b824ae6e345d539, type: 3}
+  InfoSettingsFoldout: 0
+  DerivedSettingsFoldout: 1
+  ModularSettingsFoldout: 0
+  HideSettingsFoldout: 0
+  CooldownSettings:
+    Enabled: 0
+    CooldownLength: 1
+  ChargeSettings:
+    Enabled: 0
+    ChargeEffect: {fileID: 0}
+    ChargeLength: 1
+    ChargeSoundsList: []
+  CreateSettings:
+    Enabled: 1
+    CreateEffect: {fileID: 0}
+    CreateEffectTimeout: 2
+    CreateSoundsList:
+    - {fileID: 8300000, guid: aad62f4a3245f68408b65df570a90e46, type: 3}
+  ProjectileSettings:
+    Enabled: 1
+    SpawnProjectileEffect: {fileID: 0}
+    SpawnProjectileTimeoutSeconds: 2
+    SpawnProjectileSoundsList: []
+    ProjectileEffect: {fileID: 2247413300283348944, guid: 58a67966a82f64242a63f0d57d4e33bf,
+      type: 3}
+    ProjectileTimeoutSeconds: 8
+    TravelSound: {fileID: 0}
+    EffectsToDisable:
+    - Rock
+    LaunchProjectileEffect: {fileID: 0}
+    LaunchProjectileTimeoutSeconds: 2
+    LaunchProjectileDelay: 0
+    LaunchProjectileSoundsList: []
+    ImpactEffect: {fileID: 8695401051225182231, guid: 027d240d08555784dae7e5db281ab173,
+      type: 3}
+    ImpactTimeoutSeconds: 6
+    ImpactSoundsList:
+    - {fileID: 8300000, guid: e1d8e0db26d00c84e94ba0e5945a708e, type: 3}
+    - {fileID: 8300000, guid: b064c73b1ce3e184e8a81c0597eb1958, type: 3}
+    - {fileID: 8300000, guid: 6e975d277c5a14d42ace12b59d53e997, type: 3}
+  GroundProjectileSettings:
+    Enabled: 1
+    AllignmentLayers:
+      serializedVersion: 2
+      m_Bits: 513
+    AlignmentSpeed: 10
+    MaxAlignmentAngle: 90
+    KillAngle: 90
+    HeightOffset: -0.25
+    MaxTravelDistance: 20
+    AngleSpread: 360
+    ProjectileSpeed: 8
+    TotalProjectiles: 4
+    TimeBetweenProjectiles: 0
+  HomingSettings:
+    Enabled: 1
+    HomingSeconds: 1
+    MinimumHomingDistance: 1
+    HomingSpeed: 3
+  TargetTypeSettings:
+    Enabled: 1
+    TargetType: 0
+  ColliderSettings:
+    Enabled: 1
+    CollidableLayers:
+      serializedVersion: 2
+      m_Bits: 67182593
+    ProjectileLayer: 0
+    CollisionTimeout: 3
+    ColliderRadius: 0.35
+    ZOffet: -0.35
+  StunnedSettings:
+    Enabled: 0
+    OddsToStun: 100
+    StunLength: 3
+  DamageSettings:
+    Foldout: 1
+    Enabled: 1
+    UseCriticalHits: 0
+    UseDamageOverTime: 0
+    BaseDamageSettings:
+      UseRandomAmounts: 0
+      BaseAmount: 5
+      MinAmount: 5
+      MaxAmount: 10
+      RagdollForce: 25
+    CriticalHitSettings:
+      CriticalHitOdds: 6.25
+      CriticalHitMultiplier: 1.1
+      CriticalHitSounds: []
+    DamageOverTimeSettings:
+      DamageOverTimeEffect: {fileID: 0}
+      OverTimeEffectTimeOutSeconds: 1.5
+      TickRate: 1
+      DamagePerTick: 1
+      DamageOverTimeLength: 3
+      OverTimeSounds: []

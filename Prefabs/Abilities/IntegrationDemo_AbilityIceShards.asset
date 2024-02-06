@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f6e2140fad9cc4bb236717104d750e, type: 3}
+  m_Name: IntegrationDemo_AbilityIceShards
+  m_EditorClassIdentifier: 
+  AbilityName: Ice Shards
+  AbilityDescription: A bolt of fire that races towards the current target dealing
+    10 damage initially with 5 more damage each second for 3 seconds.
+  AbilityIcon: {fileID: 2800000, guid: 225c0664134d17744b824ae6e345d539, type: 3}
+  InfoSettingsFoldout: 1
+  DerivedSettingsFoldout: 1
+  ModularSettingsFoldout: 0
+  HideSettingsFoldout: 0
+  CooldownSettings:
+    Enabled: 0
+    CooldownLength: 1
+  ChargeSettings:
+    Enabled: 0
+    ChargeEffect: {fileID: 6390081730807346873, guid: 2317dd4e70f3f2647b48bd8a302b5979,
+      type: 3}
+    ChargeLength: 1
+    ChargeSoundsList: []
+  CreateSettings:
+    Enabled: 0
+    CreateEffect: {fileID: 0}
+    CreateEffectTimeout: 2
+    CreateSoundsList: []
+  ProjectileSettings:
+    Enabled: 1
+    SpawnProjectileEffect: {fileID: 0}
+    SpawnProjectileTimeoutSeconds: 6
+    SpawnProjectileSoundsList:
+    - {fileID: 8300000, guid: e1d8e0db26d00c84e94ba0e5945a708e, type: 3}
+    ProjectileEffect: {fileID: 2736825120591149807, guid: 90956b104efbc4c449fef1a90a19f9fc,
+      type: 3}
+    ProjectileTimeoutSeconds: 6
+    TravelSound: {fileID: 0}
+    EffectsToDisable:
+    - Demo Trail
+    - Ice Shard Model
+    LaunchProjectileEffect: {fileID: 0}
+    LaunchProjectileTimeoutSeconds: 2
+    LaunchProjectileDelay: 0.5
+    LaunchProjectileSoundsList: []
+    ImpactEffect: {fileID: 8695401051225182231, guid: ee14becc80c7bf540b78670d4e7009e0,
+      type: 3}
+    ImpactTimeoutSeconds: 6
+    ImpactSoundsList:
+    - {fileID: 8300000, guid: e1d8e0db26d00c84e94ba0e5945a708e, type: 3}
+    - {fileID: 8300000, guid: b064c73b1ce3e184e8a81c0597eb1958, type: 3}
+    - {fileID: 8300000, guid: 6e975d277c5a14d42ace12b59d53e997, type: 3}
+  GeneralProjectileSettings:
+    Enabled: 1
+    ProjectileSpeed: 10
+    ProjectileMaxLaunchAngle: 180
+    TotalProjectiles: 4
+    TimeBetweenProjectiles: 0.1
+    AttachToTarget: 0
+  HomingSettings:
+    Enabled: 1
+    HomingSeconds: 1.5
+    MinimumHomingDistance: 1
+    HomingSpeed: 2.5
+  TargetTypeSettings:
+    Enabled: 1
+    TargetType: 0
+  SpreadSettings:
+    Enabled: 1
+    SpreadType: 1
+    MinSpreadX: 45
+    MaxSpreadX: -45
+    MinSpreadY: 20
+    MaxSpreadY: 0
+    SpreadAngleX: 180
+    TiltAngleY: 45
+    SpawnDistance: 1
+  ColliderSettings:
+    Enabled: 1
+    CollidableLayers:
+      serializedVersion: 2
+      m_Bits: 67182593
+    ProjectileLayer: 0
+    CollisionTimeout: 0.75
+    ColliderRadius: 0.1
+    ZOffet: 0
+  StunnedSettings:
+    Enabled: 0
+    OddsToStun: 100
+    StunLength: 3
+  DamageSettings:
+    Foldout: 1
+    Enabled: 1
+    UseCriticalHits: 1
+    UseDamageOverTime: 0
+    BaseDamageSettings:
+      UseRandomAmounts: 0
+      BaseAmount: 5
+      MinAmount: 5
+      MaxAmount: 10
+      RagdollForce: 25
+    CriticalHitSettings:
+      CriticalHitOdds: 6.25
+      CriticalHitMultiplier: 1.1
+      CriticalHitSounds: []
+    DamageOverTimeSettings:
+      DamageOverTimeEffect: {fileID: 0}
+      OverTimeEffectTimeOutSeconds: 1.5
+      TickRate: 1
+      DamagePerTick: 1
+      DamageOverTimeLength: 3
+      OverTimeSounds: []
