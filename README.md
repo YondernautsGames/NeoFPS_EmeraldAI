@@ -100,7 +100,7 @@ The AI abilities such as the different spells cast by the example NPC in the dem
 ## Issues
 
 #### AI Do Not Null Check Their Target
-When the NeoFPS player character dies and respawns, this destroys their old character object. Any Emerald AI that were targeting the player character will then break and throw errors to the console. This has been reported as a bug to the Emerald AI developers and should hopefully be fixed soon.
+When the NeoFPS player character dies and respawns, this destroys their old character object. Any Emerald AI that were targeting the player character will then break and throw errors to the console. This has been fixed by Black Horizon Studios, and should be included in an upcoming update soon.
 
 #### Save Games Not Currently Implemented
 The NeoFPS save games system has not yet been integrated with Emerald AI. Due to the complexity of the Emerald AI code base, and it not being written with save systems in mind (eg initialisation setting properties that would override the load state), it is not possible to implement save games to Emerald AI without considerable changes to its code. This is outside the scope of this integration.
