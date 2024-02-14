@@ -21,6 +21,8 @@ This integration example is intended to be dropped in to a fresh project along w
 
 4. Create new AI and player prefabs required or modify the existing ones using the integration scripts and the instructions below.
 
+[!WARNING] Do not place the integration folder inside the NeoFPS asset folder structure. If you do this then all of its scripts will be picked up by the NeoFPS assembly definition, which will limit what other scripts within the project they have access to. For more information on assembly definitions, see [the Unity Manual](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html).
+
 ## Demo Scene and Assets
 The demo scene is a basic prototype scene containing a number of the example AI provided with Emerald AI, which have been tweaked to work with NeoFPS.
 
