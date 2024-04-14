@@ -37,7 +37,9 @@ The script **NeoFpsEmeraldAI_AsyncLoadFixer.cs** is required for Emerald AI to w
 
 **EmeraldAISystemFormatter.cs** is a simple data formatter that allows you to save basic AI information (eg alive/dead).
 
-**NeoFpsEmeraldAI_InitializerOverride.cs** is a legacy script that made it possible to support location based damage before Emerald AI had its own system added. It is now preferred to use the `NeoFpsEmeraldAI_LocationBasedDamageHandler` as listed above.
+**NeoFpsEmeraldAI_InitializerOverride.cs** is a legacy script that made it possible to support location based damage before Emerald AI had its own system added. 
+> [!WARNING]
+> It is now preferred to use the `NeoFpsEmeraldAI_LocationBasedDamageHandler` as listed above instead of `NeoFpsEmeraldAI_InitializerOverride`. This script has been kept to provide compatibility with earlier versions of Emerald AI 3.
 
 **NeoFpsEmeraldAI_FirearmAttractor.cs** is added to your NeoFPS firearms or muzzle attachments in order to leverage Emerald AI's `AttractModifier` and add audio cues to gunshots which alert AI characters.
 
