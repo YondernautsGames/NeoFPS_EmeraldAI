@@ -120,7 +120,7 @@ namespace NeoFPS.EmeraldAI
 
                     // Report damage dealt
                     if (damage > 0f && source != null && source.controller != null)
-                        source.controller.currentCharacter.ReportTargetHit(m_Critical);
+                    	DamageEvents.ReportDamageHandlerHit(this, source, transform.position, m_Critical ? DamageResult.Critical : DamageResult.Standard, damage);
 
                     // Report killed
                     if (!isDead && m_EmeraldAISystem.IsDead && source.controller.isPlayer)
