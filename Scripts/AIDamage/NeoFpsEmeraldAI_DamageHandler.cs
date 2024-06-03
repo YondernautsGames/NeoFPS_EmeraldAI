@@ -101,7 +101,7 @@ namespace NeoFPS.EmeraldAI
 
         public DamageResult AddDamage(float damage, IDamageSource source)
         {
-            bool isDead = m_EmeraldAISystem.HealthComponent.Health > 0;
+            bool alreadyDead = m_EmeraldAISystem.HealthComponent.Health <= 0;
 
             if (source == null)
                 return AddDamage(damage);
@@ -132,7 +132,7 @@ namespace NeoFPS.EmeraldAI
 					}
 
                     // Report killed
-                    if (!isDead && m_EmeraldAISystem.HealthComponent.Health > 0 && source.controller.isPlayer)
+                    if (!alreadyDead && m_EmeraldAISystem.HealthComponent.Health <= 0 && source.controller.isPlayer)
                         OnPlayerKilledAI();
                 }
                 else
