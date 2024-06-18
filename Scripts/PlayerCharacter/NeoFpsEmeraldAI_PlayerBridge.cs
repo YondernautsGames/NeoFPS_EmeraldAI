@@ -10,6 +10,10 @@ namespace NeoFPS.EmeraldAI
     [RequireComponent(typeof(FactionExtension))]
     public class NeoFpsEmeraldAI_PlayerBridge : EmeraldPlayerBridge
     {
+        [SerializeField, Tooltip("The player character's damage handler that emerald AI damage will be sent to. It doesn't seem to have the ability to target specific transforms.")]
+        private Transform m_DefaultDamageHandler = null;
+
+        private IDamageHandler m_TargetDamageHandler = null;
         private IHealthManager m_HealthManager = null;
         private IQuickSlots m_QuickSlots = null;
         private IMeleeWeapon m_MeleeWeapon = null;
@@ -33,6 +37,12 @@ namespace NeoFPS.EmeraldAI
             {
                 m_QuickSlots.onSelectionChanged += OnWieldableSelectionChanged;
             }
+
+            // Get the default damage handler, or root damage handler
+            if (m_DefaultDamageHandler != null)
+                m_TargetDamageHandler = m_DefaultDamageHandler.GetComponent<IDamageHandler>();
+            if (m_TargetDamageHandler == null)
+                m_TargetDamageHandler = GetComponent<IDamageHandler>();
         }
 
         public override void Start()
@@ -45,8 +55,8 @@ namespace NeoFPS.EmeraldAI
 
         public override void DamageCharacterController(int DamageAmount, Transform Target)
         {
-            if (Target.TryGetComponent<IDamageHandler>(out var damageHandler))
-                damageHandler.AddDamage(DamageAmount);
+            if (m_TargetDamageHandler != null)
+                m_TargetDamageHandler.AddDamage(DamageAmount);
             else
                 m_HealthManager.AddDamage(DamageAmount);
         }

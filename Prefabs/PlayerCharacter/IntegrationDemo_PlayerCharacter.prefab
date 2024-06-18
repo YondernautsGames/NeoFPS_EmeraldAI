@@ -2833,6 +2833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625fd8b9bf5d3804a826e99dfb6e894f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ScrollThreshold: 0.1
 --- !u!114 &7740023997121619014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2869,14 +2870,18 @@ MonoBehaviour:
   m_MaxDistance: 2.25
   m_TickRate: 1
   m_MassLimit: 50.1
-  m_AnalogRotateRate: 60
-  m_MouseRotateRate: 10
   m_ValidCarryLayers:
     serializedVersion: 2
     m_Bits: 20975617
   m_BlockingLayers:
     serializedVersion: 2
     m_Bits: 8391169
+  m_AnalogRotateRate: 60
+  m_MouseRotateRate: 10
+  m_PushScrollMultiplier: 60
+  m_PushDirectionalSpeed: 0.5
+  m_PushForwardLimit: 0.5
+  m_PushBackwardLimit: 0.5
   m_DropOnDamage: 10
   m_MaxTotalDamage: 10
   m_Anchor: {fileID: 6291284096252924017}
@@ -3006,6 +3011,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  m_DefaultDamageHandler: {fileID: 7338144641930551976}
 --- !u!1 &7333359605277913634
 GameObject:
   m_ObjectHideFlags: 0
