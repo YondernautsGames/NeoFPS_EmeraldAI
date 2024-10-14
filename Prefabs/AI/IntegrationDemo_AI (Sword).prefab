@@ -3599,9 +3599,11 @@ MonoBehaviour:
   DeathDelayTimer: 0
   CurrentAnimationIndex: 0
   TargetDetectionActive: 0
+  TargetOutOfHeightRange: 0
   TooCloseDistance: 1
   AttackDistance: 2.5
   CurrentEmeraldAIAbility: {fileID: 0}
+  AvailableConditionAbilities: []
   CurrentAttackData:
     AbilityObject: {fileID: 0}
     AttackAnimation: 0
@@ -3632,6 +3634,7 @@ MonoBehaviour:
   CurrentHealth: 130
   StartingHealth: 130
   HealRate: 0
+  AttachHitEffects: 0
   Immortal: 0
   CurrentActiveEffects: []
   HitEffectFoldout: 0
@@ -3744,7 +3747,7 @@ MonoBehaviour:
   DetectionFrequency: 1
   DetectionLayerMask:
     serializedVersion: 2
-    m_Bits: 67117056
+    m_Bits: 8192
   ObstructionDetectionLayerMask:
     serializedVersion: 2
     m_Bits: 8395265
@@ -3763,6 +3766,8 @@ MonoBehaviour:
   ObstructionType: 2
   LineOfSightTargets: []
   CurrentFollowers: []
+  NearbyAllies: []
+  LowHealthAllies: []
   CurrentFaction: 0
   FactionRelations: 
   FactionRelationsList:
@@ -3771,7 +3776,7 @@ MonoBehaviour:
   AIFactionsList: 
   HideSettingsFoldout: 0
   DetectionFoldout: 0
-  TagFoldout: 0
+  TagFoldout: 1
   FactionFoldout: 0
 --- !u!114 &6842926668875408366
 MonoBehaviour:
@@ -3835,6 +3840,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871be6a68bd875f49b5587968e1ac56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InternalDodge: 0
+  InternalBlock: 0
+  InternalHit: 0
   IsEmoting: 0
   IsIdling: 0
   IsAttacking: 0
@@ -3860,8 +3868,6 @@ MonoBehaviour:
   MissingRuntimeController: 0
   AnimationsUpdated: 0
   AIAnimator: {fileID: 6842926668875408363}
-  AnimatorCullingMode: 0
-  UseWarningAnimation: 0
   AttackingTracker: 0
   AttackTriggered: 0
   WarningAnimationTriggered: 0
@@ -3983,6 +3989,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoreLineOfSight: []
   LBDComponentsLayer: 16
+  DeadLBDComponentsLayer: 0
+  SetCollidersLayerAndTag: 1
   LBDComponentsTag: AI
   LBDSettingsFoldout: 1
   HideSettingsFoldout: 0
@@ -4221,6 +4229,7 @@ MonoBehaviour:
   m_NavMeshAgent: {fileID: 0}
   AIBoxCollider: {fileID: 0}
   AIAnimator: {fileID: 0}
+  TimeSinceEnabled: 0
   DetectionComponent: {fileID: 0}
   BehaviorsComponent: {fileID: 0}
   MovementComponent: {fileID: 0}
