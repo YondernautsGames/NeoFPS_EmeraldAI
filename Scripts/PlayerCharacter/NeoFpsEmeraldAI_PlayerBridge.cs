@@ -104,7 +104,8 @@ namespace NeoFPS.EmeraldAI
 
             if (m_MeleeWeapon != null)
             {
-
+                m_MeleeWeapon.onAttackingChange += OnMeleeAttackingChanged;
+                m_MeleeWeapon.onBlockStateChange += OnMeleeBlockingChanged;
             }
         }
 
